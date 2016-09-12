@@ -7,4 +7,4 @@
  * @copyright ©2016 马面 All Rights Reserved
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
  */
-package net.mamian.designpattern.proxy;
+package net.mamian.designpattern.代理模式;
