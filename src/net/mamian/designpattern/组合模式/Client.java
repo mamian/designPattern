@@ -4,6 +4,7 @@ import java.util.List;
 
 /**
  * 组合模式-入口
+ * 将具有上下级关系的一系列对象组合成一个树状结构，如机构人员树
  *
  * @author mamian
  * @mail mamianskyma@aliyun.com
