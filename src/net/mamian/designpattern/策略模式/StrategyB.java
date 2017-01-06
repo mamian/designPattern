@@ -2,6 +2,7 @@ package net.mamian.designpattern.策略模式;
 
 /**
  * 具体策略B
+ * 具体策略类，实现具体策略的方法
  *
  * @author mamian
  * @mail mamianskyma@aliyun.com

@@ -2,6 +2,7 @@ package net.mamian.designpattern.策略模式;
 
 /**
  * 抽象策略类
+ * 策略父类，定义所有策略的公共方法
  *
  * @author mamian
  * @mail mamianskyma@aliyun.com

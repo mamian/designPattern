@@ -2,6 +2,10 @@ package net.mamian.designpattern.策略模式;
 
 /**
  * 策略模式 入口
+ * 
+ * 客户端类
+ * 实例化一个容器对象，此对象中会包含一个具体的策略
+ * 再执行容器实例的方法（此方法会调用具体策略的方法）
  *
  * @author mamian
  * @mail mamianskyma@aliyun.com
