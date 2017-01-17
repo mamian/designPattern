@@ -5,6 +5,7 @@ public class Boy {
 	private String age;
 	private String sex;
 	
+	//private Memento memento;//此处的memento存储本类中那些需要备忘的属性信息
 	public Memento createMemento(){
 		return new Memento(name,age);
 	}
