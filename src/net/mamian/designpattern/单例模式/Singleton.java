@@ -2,6 +2,10 @@ package net.mamian.designpattern.单例模式;
 
 /**
  * 单例模式-单线程
+ * 
+ * 实例为静态成员
+ * 构造方法为private
+ * 静态方法返回惟一实例
  *
  * @author mamian
  * @mail mamianskyma@aliyun.com
