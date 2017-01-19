@@ -1,18 +1,18 @@
-package net.mamian.designpattern.¶àÀıÄ£Ê½;
+package net.mamian.designpattern.å¤šä¾‹æ¨¡å¼;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 public class Multiton {
-	private static int maxInstanceNum=10;//×î´óÊµÀıÊıÁ¿
-	private static int nowInstanceNum=0;//µ±Ç°Êµ±ã±àºÅ
-	private static List<Multiton> instanceList = new ArrayList<Multiton>();//ÊµÀıÁĞ±í
-	private static List<String> instanceNameList = new ArrayList<String>();//ÊµÀıÃû³ÆµÄÁĞ±í
+	private static int maxInstanceNum=10;//æœ€å¤§å®ä¾‹æ•°é‡
+	private static int nowInstanceNum=0;//å½“å‰å®ä¾¿ç¼–å·
+	private static List<Multiton> instanceList = new ArrayList<Multiton>();//å®ä¾‹åˆ—è¡¨
+	private static List<String> instanceNameList = new ArrayList<String>();//å®ä¾‹åç§°çš„åˆ—è¡¨
 	
-	static{//°ÑËùÓĞµÄ»ÊµÛ¶¼²úÉú³öÀ´
+	static{//æŠŠæ‰€æœ‰çš„çš‡å¸éƒ½äº§ç”Ÿå‡ºæ¥
 		for(int i=0;i<maxInstanceNum;i++){
-			instanceList.add(new Multiton("»Ê"+(i+1)+"µÛ"));
+			instanceList.add(new Multiton("çš‡"+(i+1)+"å¸"));
 		}
 	}
 	
@@ -23,7 +23,7 @@ public class Multiton {
 	
 	public static Multiton getInstance(){
 		Random random = new Random();
-		nowInstanceNum = random.nextInt(maxInstanceNum); //Ëæ»úÀ­³öÒ»¸ö»ÊµÛ£¬Ö»ÒªÊÇ¸ö¾«ÉñÁìĞä¾Í³É
+		nowInstanceNum = random.nextInt(maxInstanceNum); //éšæœºæ‹‰å‡ºä¸€ä¸ªçš‡å¸ï¼Œåªè¦æ˜¯ä¸ªç²¾ç¥é¢†è¢–å°±æˆ
 		return (Multiton)instanceList.get(nowInstanceNum);
 	}
 	

@@ -1,8 +1,8 @@
-package net.mamian.designpattern.ÊÊÅäÆ÷Ä£Ê½;
+package net.mamian.designpattern.é€‚é…å™¨æ¨¡å¼;
 
 import java.util.Map;
 /*
- * ¼Ì³Ğ´ı×ª»»Àà£¬ÊµÏÖÄ¿µÄ½Ó¿Ú*/
+ * ç»§æ‰¿å¾…è½¬æ¢ç±»ï¼Œå®ç°ç›®çš„æ¥å£*/
 public class Adapter extends OuterUserInfo implements IUserInfo{
 	private Map outUserBaseInfo = super.getUserBaseInfo();
 	private Map outUserWorkInfo = super.getUserWorkInfo();

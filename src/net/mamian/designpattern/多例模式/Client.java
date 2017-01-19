@@ -1,16 +1,16 @@
-package net.mamian.designpattern.¶àÀıÄ£Ê½;
+package net.mamian.designpattern.å¤šä¾‹æ¨¡å¼;
 
 /*
- * Èı¸östatic±äÁ¿£º×î´óÊµÀıÊıÁ¿maxInstanceNum£¬µ±Ç°ÊµÀı±àºÅnowInstanceNum£¬ÊµÀıÁĞ±íinstanceList
- * Ò»¸östatic´úÂë¿é£º´Ë´úÂë¿éÖĞÉú³ÉmaxInstanceNum¸öÊµÀı£¬²¢½«ÆäÌí¼Óµ½ÊµÀıÁĞ±íinstanceListÖĞ
- * ¹¹Ôì·½·¨Îªprivate
- * Ò»¸östatic·½·¨getInstance£º»ñÈ¡0-maxInstanceNum¼äµÄÒ»¸öËæ»úÕûÊırandom.nextInt(maxInstanceNum)£¬²¢´ÓÊµÀıÁĞ±íinstanceListÖĞ»ñÈ¡Ë÷ÒıÎª´ËËæ»úÊıµÄÊµÀı
+ * ä¸‰ä¸ªstaticå˜é‡ï¼šæœ€å¤§å®ä¾‹æ•°é‡maxInstanceNumï¼Œå½“å‰å®ä¾‹ç¼–å·nowInstanceNumï¼Œå®ä¾‹åˆ—è¡¨instanceList
+ * ä¸€ä¸ªstaticä»£ç å—ï¼šæ­¤ä»£ç å—ä¸­ç”ŸæˆmaxInstanceNumä¸ªå®ä¾‹ï¼Œå¹¶å°†å…¶æ·»åŠ åˆ°å®ä¾‹åˆ—è¡¨instanceListä¸­
+ * æ„é€ æ–¹æ³•ä¸ºprivate
+ * ä¸€ä¸ªstaticæ–¹æ³•getInstanceï¼šè·å–0-maxInstanceNumé—´çš„ä¸€ä¸ªéšæœºæ•´æ•°random.nextInt(maxInstanceNum)ï¼Œå¹¶ä»å®ä¾‹åˆ—è¡¨instanceListä¸­è·å–ç´¢å¼•ä¸ºæ­¤éšæœºæ•°çš„å®ä¾‹
  * */
 public class Client {
 	public static void main(String[] args) {
 		for(int i=0;i<100;i++){
 			Multiton.getInstance();
-			System.out.print("µÚ"+(i+1)+"¸ö´ó³¼²Î°İµÄÊÇ£º");
+			System.out.print("ç¬¬"+(i+1)+"ä¸ªå¤§è‡£å‚æ‹œçš„æ˜¯ï¼š");
 			Multiton.emperorInfo();
 		}
 	}
