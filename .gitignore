@@ -5,3 +5,5 @@ nb-configuration.xml
 .project
 .settings/
 /bin/
+/.idea/*
+*.iml
