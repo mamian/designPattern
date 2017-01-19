@@ -6,11 +6,11 @@ package net.mamian.designpattern.中介者模式;
  * 
  * */
 public class AbstractColleague {
-	
-	protected AbstractMediator mediator;
-	
-	public AbstractColleague(AbstractMediator mediator) {
-		this.mediator = mediator;
-	}
-	
+
+    protected AbstractMediator mediator;
+
+    public AbstractColleague(AbstractMediator mediator) {
+        this.mediator = mediator;
+    }
+
 }
