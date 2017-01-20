@@ -1,16 +1,23 @@
-package net.mamian.designpattern.ÖĞ½éÕßÄ£Ê½;
+package net.mamian.designpattern.ä¸­ä»‹è€…æ¨¡å¼;
 
+/**
+ * @author mamian
+ * @mail mamianskyma@aliyun.com
+ * @date 2016-10-2 21:26:45
+ * @copyright Â©2016 é©¬é¢ All Rights Reserved
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
 public class Buy extends AbstractColleague {
     public Buy(AbstractMediator mediator) {
         super(mediator);
     }
 
     public void startBuy(int num) {
-        super.mediator.execute("¹ºÂò", num);
-        System.out.println("Buy¶ÔÏóÖ´ĞĞstartBuy·½·¨");
+        super.mediator.execute("è´­ä¹°", num);
+        System.out.println("Buyå¯¹è±¡æ‰§è¡ŒstartBuyæ–¹æ³•");
     }
 
     public void NotBuy() {
-        System.out.println("Buy¶ÔÏóÖ´ĞĞNotBuy·½·¨");
+        System.out.println("Buyå¯¹è±¡æ‰§è¡ŒNotBuyæ–¹æ³•");
     }
 }

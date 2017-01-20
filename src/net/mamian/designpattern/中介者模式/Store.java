@@ -1,12 +1,10 @@
-package net.mamian.designpattern.ÖĞ½éÕßÄ£Ê½;
+package net.mamian.designpattern.ä¸­ä»‹è€…æ¨¡å¼;
 
 /**
- *
- *
  * @author mamian
  * @mail mamianskyma@aliyun.com
  * @date 2017-1-19 23:57:41
- * @copyright ?2016 ÂíÃæ All Rights Reserved
+ * @copyright Â©2016 é©¬é¢ All Rights Reserved
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
  */
 public class Store extends AbstractColleague {
@@ -15,7 +13,7 @@ public class Store extends AbstractColleague {
     }
 
     public void startStore(int num) {
-        super.mediator.execute("´æ´¢", num);
-        System.out.println("Store¶ÔÏóÖ´ĞĞstartStore·½·¨");
+        super.mediator.execute("å­˜å‚¨", num);
+        System.out.println("Storeå¯¹è±¡æ‰§è¡ŒstartStoreæ–¹æ³•");
     }
 }

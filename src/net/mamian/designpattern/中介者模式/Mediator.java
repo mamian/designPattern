@@ -1,30 +1,37 @@
-package net.mamian.designpattern.ÖĞ½éÕßÄ£Ê½;
+package net.mamian.designpattern.ä¸­ä»‹è€…æ¨¡å¼;
 
+/**
+ * @author mamian
+ * @mail mamianskyma@aliyun.com
+ * @date 2016-10-2 21:26:45
+ * @copyright Â©2016 é©¬é¢ All Rights Reserved
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
 public class Mediator extends AbstractMediator {
 
     @Override
-    public void execute(String message, Object obj1) {//²ÎÊıÎªÅĞ¶ÏÖ´ĞĞÄÄ¸ö¶ÔÏó·½·¨µÄÌõ¼şºÍ²ÎÊı
-        if (message.equals("¹ºÂò")) {
+    public void execute(String message, Object obj1) {//å‚æ•°ä¸ºåˆ¤æ–­æ‰§è¡Œå“ªä¸ªå¯¹è±¡æ–¹æ³•çš„æ¡ä»¶å’Œå‚æ•°
+        if (message.equals("è´­ä¹°")) {
             buyComputer((Integer) obj1);
-            System.out.println("¾ßÌåÖĞ½éÕß¶ÔÏómediatorµÄexecute·½·¨" + message);
-        } else if (message.equals("ÏúÊÛ")) {
+            System.out.println("å…·ä½“ä¸­ä»‹è€…å¯¹è±¡mediatorçš„executeæ–¹æ³•" + message);
+        } else if (message.equals("é”€å”®")) {
             sellComputer((Integer) obj1);
-            System.out.println("¾ßÌåÖĞ½éÕß¶ÔÏómediatorµÄexecute·½·¨" + message);
-        } else if (message.equals("´æ´¢")) {
+            System.out.println("å…·ä½“ä¸­ä»‹è€…å¯¹è±¡mediatorçš„executeæ–¹æ³•" + message);
+        } else if (message.equals("å­˜å‚¨")) {
             storeComputer((Integer) obj1);
-            System.out.println("¾ßÌåÖĞ½éÕß¶ÔÏómediatorµÄexecute·½·¨" + message);
+            System.out.println("å…·ä½“ä¸­ä»‹è€…å¯¹è±¡mediatorçš„executeæ–¹æ³•" + message);
         }
     }
 
     private void buyComputer(int num) {
-        System.out.println("¾ßÌåÖĞ½éÕß¶ÔÏóÖ´ĞĞbuyComputer·½·¨£¬¹ºÂò" + num + "Ì¨µçÄÔ");
+        System.out.println("å…·ä½“ä¸­ä»‹è€…å¯¹è±¡æ‰§è¡ŒbuyComputeræ–¹æ³•ï¼Œè´­ä¹°" + num + "å°ç”µè„‘");
     }
 
     private void sellComputer(int num) {
-        System.out.println("¾ßÌåÖĞ½éÕß¶ÔÏóÖ´ĞĞsellComputer·½·¨£¬ÏúÊÛ" + num + "Ì¨µçÄÔ");
+        System.out.println("å…·ä½“ä¸­ä»‹è€…å¯¹è±¡æ‰§è¡ŒsellComputeræ–¹æ³•ï¼Œé”€å”®" + num + "å°ç”µè„‘");
     }
 
     private void storeComputer(int num) {
-        System.out.println("¾ßÌåÖĞ½éÕß¶ÔÏóÖ´ĞĞstoreComputer·½·¨£¬´¢´æ" + num + "Ì¨µçÄÔ");
+        System.out.println("å…·ä½“ä¸­ä»‹è€…å¯¹è±¡æ‰§è¡ŒstoreComputeræ–¹æ³•ï¼Œå‚¨å­˜" + num + "å°ç”µè„‘");
     }
 }

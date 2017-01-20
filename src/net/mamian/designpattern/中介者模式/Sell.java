@@ -1,12 +1,1 @@
-package net.mamian.designpattern.ÖĞ½éÕßÄ£Ê½;
-
-public class Sell extends AbstractColleague {
-    public Sell(AbstractMediator mediator) {
-        super(mediator);
-    }
-
-    public void startSell(int num) {
-        super.mediator.execute("ÏúÊÛ", num);
-        System.out.println("Sell¶ÔÏóÖ´ĞĞstartSell·½·¨");
-    }
-}
+package net.mamian.designpattern.ä¸­ä»‹è€…æ¨¡å¼;/** * @author mamian * @mail mamianskyma@aliyun.com * @date 2016-10-2 21:26:45 * @copyright Â©2016 é©¬é¢ All Rights Reserved * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER. */public class Sell extends AbstractColleague {    public Sell(AbstractMediator mediator) {        super(mediator);    }    public void startSell(int num) {        super.mediator.execute("é”€å”®", num);        System.out.println("Sellå¯¹è±¡æ‰§è¡ŒstartSellæ–¹æ³•");    }}

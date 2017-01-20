@@ -1,10 +1,14 @@
-package net.mamian.designpattern.ÖĞ½éÕßÄ£Ê½;
+package net.mamian.designpattern.ä¸­ä»‹è€…æ¨¡å¼;
 
-/*
- * °üº¬Ò»¸öprotectedĞŞÊÎµÄ³éÏóÖĞ½éÕß¶ÔÏómediator£¬ÆäËùÓĞµÄ¶ÔÏó¿É¹²Ïí´ËÖĞ½éÕß²¢µ÷ÓÃ´ËÖĞ½éÕßµÄ·½·¨
- * 
- * 
- * */
+/**
+ * åŒ…å«ä¸€ä¸ªprotectedä¿®é¥°çš„æŠ½è±¡ä¸­ä»‹è€…å¯¹è±¡mediatorï¼Œå…¶æ‰€æœ‰çš„å¯¹è±¡å¯å…±äº«æ­¤ä¸­ä»‹è€…å¹¶è°ƒç”¨æ­¤ä¸­ä»‹è€…çš„æ–¹æ³•
+ *
+ * @author mamian
+ * @mail mamianskyma@aliyun.com
+ * @date 2016-10-2 21:26:45
+ * @copyright Â©2016 é©¬é¢ All Rights Reserved
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
 public class AbstractColleague {
 
     protected AbstractMediator mediator;
