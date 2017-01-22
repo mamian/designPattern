@@ -1,20 +1,25 @@
-package net.mamian.designpattern.ÏíÔªÄ£Ê½;
+package net.mamian.designpattern.äº«å…ƒæ¨¡å¼;
 
-/*
- * ÏíÔªÄ£Ê½£ºÄÚ´æÖĞ´æÔÚ´óÁ¿ÊµÀı¶ÔÏó£¬µ«²¢²»ÊÇËùÓĞµÄÊµÀı¾ùÓĞĞ§£¬¿ÉÄÜGC»¹Î´µ½»ØÊÕÊ±»ú£¬²ÉÓÃÏíÔªÄ£Ê½¿É½ÚÊ¡ÄÚ´æ
- * Èç¶ÔÏó³Ø»úÖÆ¿ÉÒÔ½ÚÊ¡´óÁ¿ÊµÀıÕ¼ÓÃµÄÄÚ´æ¿Õ¼ä
- * 
- * */
+/**
+ * äº«å…ƒæ¨¡å¼ï¼šå†…å­˜ä¸­å­˜åœ¨å¤§é‡å®ä¾‹å¯¹è±¡ï¼Œä½†å¹¶ä¸æ˜¯æ‰€æœ‰çš„å®ä¾‹å‡æœ‰æ•ˆï¼Œå¯èƒ½GCè¿˜æœªåˆ°å›æ”¶æ—¶æœºï¼Œé‡‡ç”¨äº«å…ƒæ¨¡å¼å¯èŠ‚çœå†…å­˜
+ * å¦‚å¯¹è±¡æ± æœºåˆ¶å¯ä»¥èŠ‚çœå¤§é‡å®ä¾‹å ç”¨çš„å†…å­˜ç©ºé—´
+ *
+ * @author mamian
+ * @mail mamianskyma@aliyun.com
+ * @date 2017-01-22 23:10:18
+ * @copyright Â©2017 é©¬é¢ All Rights Reserved
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
 public class Client {
 	public static void main(String[] args) {
 		for(int i=0;i<4;i++){
-			String location = "¿¼µã"+i;
+			String location = "è€ƒç‚¹"+i;
 			for(int j=0;j<10;j++){
-				String key = location+"£¬ÈËÔ±"+j;
+				String key = location+"ï¼Œäººå‘˜"+j;
 			}
 		}
-		
-		SignInfo signInfo = SignInfoFactory.getSignInfo("¿¼µã3£¬ÈËÔ±5");
+
+		SignInfo signInfo = SignInfoFactory.getSignInfo("è€ƒç‚¹3ï¼Œäººå‘˜5");
 		signInfo.printSignInfo();
 	}
 }

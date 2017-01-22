@@ -1,14 +1,23 @@
-package net.mamian.designpattern.ÏíÔªÄ£Ê½;
+package net.mamian.designpattern.äº«å…ƒæ¨¡å¼;
 
+/**
+ * äº«å…ƒæ¨¡å¼
+ *
+ * @author mamian
+ * @mail mamianskyma@aliyun.com
+ * @date 2017-01-22 23:13:15
+ * @copyright Â©2017 é©¬é¢ All Rights Reserved
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
 public class SignInfo {
-	private String id;//¿¼ÊÔÈËÔ±ID
-	private String location;//¿¼µã
+	private String id;//è€ƒè¯•äººå‘˜ID
+	private String location;//è€ƒç‚¹
 	private String address;
 	private String phone;
-	
-	
+
+
 	public void printSignInfo(){
-		System.out.println("¿¼ÊÔÈËÔ±ID£º"+id+"£¬¿¼µã£º"+location+"£¬µØÖ·£º"+address+"£¬µç»°£º"+phone);
+		System.out.println("è€ƒè¯•äººå‘˜IDï¼š"+id+"ï¼Œè€ƒç‚¹ï¼š"+location+"ï¼Œåœ°å€ï¼š"+address+"ï¼Œç”µè¯ï¼š"+phone);
 	}
 	public String getId() {
 		return id;

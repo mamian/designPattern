@@ -1,19 +1,28 @@
-package net.mamian.designpattern.ÏíÔªÄ£Ê½;
+package net.mamian.designpattern.äº«å…ƒæ¨¡å¼;
 
 import java.util.HashMap;
 
+/**
+ *
+ *
+ * @author mamian
+ * @mail mamianskyma@aliyun.com
+ * @date 2017-01-22 23:27:19
+ * @copyright Â©2017 é©¬é¢ All Rights Reserved
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
 public class SignInfoFactory {
 	private static HashMap<String,SignInfo> pool = new HashMap<String,SignInfo>();
-	
+
 	public static SignInfo getSignInfo(String key){
 		SignInfo result = null;
 		if(!pool.containsKey(key)){
 			result = new SignInfo4Pool(key);
 			pool.put(key, result);
-			System.out.println("½¨Á¢¶ÔÏó--"+key+"--£¬²¢·ÅÖÃµ½¶ÔÏó³ØÖĞ");
+			System.out.println("å»ºç«‹å¯¹è±¡--"+key+"--ï¼Œå¹¶æ”¾ç½®åˆ°å¯¹è±¡æ± ä¸­");
 		}else{
 			result = pool.get(key);
-			System.out.println("Ö±½Ó´Ó¶ÔÏó³ØÖĞÈ¡¶ÔÏó£º"+key);
+			System.out.println("ç›´æ¥ä»å¯¹è±¡æ± ä¸­å–å¯¹è±¡ï¼š"+key);
 		}
 		return result;
 	}
