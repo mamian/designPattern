@@ -9,18 +9,18 @@ package net.mamian.designpattern.享元模式;
  * @copyright ©2017 马面 All Rights Reserved
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
  */
-public class SignInfo4Pool extends SignInfo{
-	private String key;
+public class SignInfo4Pool extends SignInfo {
+    private String key;
 
-	public SignInfo4Pool(String key){
-		this.key = key;
-	}
+    public SignInfo4Pool(String key) {
+        this.key = key;
+    }
 
-	public String getKey() {
-		return key;
-	}
+    public String getKey() {
+        return key;
+    }
 
-	public void setKey(String key) {
-		this.key = key;
-	}
+    public void setKey(String key) {
+        this.key = key;
+    }
 }

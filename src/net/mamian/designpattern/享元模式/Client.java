@@ -11,15 +11,15 @@ package net.mamian.designpattern.享元模式;
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
  */
 public class Client {
-	public static void main(String[] args) {
-		for(int i=0;i<4;i++){
-			String location = "考点"+i;
-			for(int j=0;j<10;j++){
-				String key = location+"，人员"+j;
-			}
-		}
+    public static void main(String[] args) {
+        for (int i = 0; i < 4; i++) {
+            String location = "考点" + i;
+            for (int j = 0; j < 10; j++) {
+                String key = location + "，人员" + j;
+            }
+        }
 
-		SignInfo signInfo = SignInfoFactory.getSignInfo("考点3，人员5");
-		signInfo.printSignInfo();
-	}
+        SignInfo signInfo = SignInfoFactory.getSignInfo("考点3，人员5");
+        signInfo.printSignInfo();
+    }
 }
