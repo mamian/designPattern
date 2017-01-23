@@ -1,17 +1,26 @@
-package net.mamian.designpattern.Ô­ĞÍÄ£Ê½;
+package net.mamian.designpattern.åŸå‹æ¨¡å¼;
 
+/**
+ *
+ *
+ * @author mamian
+ * @mail mamianskyma@aliyun.com
+ * @date 2017-01-23 23:30:50
+ * @copyright Â©2017 é©¬é¢ All Rights Reserved
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
 public class Mail implements Cloneable{
-	private String receiver;//ÊÕ¼şÈË
-	private String subject;//ÓÊ¼şÖ÷Ìâ
-	private String appellation;//³ÆÎ½
-	private String contxt;//ÓÊ¼şÄÚÈİ
-	private String tail;//ÓÊ¼şµÄÎ²²¿£¬Ò»°ã¶¼ÊÇ¼ÓÉÏ¡°XXX°æÈ¨ËùÓĞ¡±µÈĞÅÏ¢
+	private String receiver;//æ”¶ä»¶äºº
+	private String subject;//é‚®ä»¶ä¸»é¢˜
+	private String appellation;//ç§°è°“
+	private String contxt;//é‚®ä»¶å†…å®¹
+	private String tail;//é‚®ä»¶çš„å°¾éƒ¨ï¼Œä¸€èˆ¬éƒ½æ˜¯åŠ ä¸Šâ€œXXXç‰ˆæƒæ‰€æœ‰â€ç­‰ä¿¡æ¯
 
 	public Mail(AdvTemplate advTemplate) {
 		this.subject = advTemplate.getAdvSubject();
 		this.contxt = advTemplate.getAdvContext();
 	}
-	
+
 	public Mail clone(){
 		Mail mail = null;
 		try{
@@ -21,12 +30,12 @@ public class Mail implements Cloneable{
 		}
 		return mail;
 	}
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
 	public String getReceiver() {
 		return receiver;
 	}

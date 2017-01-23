@@ -1,15 +1,24 @@
-package net.mamian.designpattern.Ô­ĞÍÄ£Ê½;
+package net.mamian.designpattern.åŸå‹æ¨¡å¼;
 
+/**
+ *
+ *
+ * @author mamian
+ * @mail mamianskyma@aliyun.com
+ * @date 2017-01-23 23:27:15
+ * @copyright Â©2017 é©¬é¢ All Rights Reserved
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
 public class AdvTemplate {
-	//¹ã¸æĞÅÃû³Æ
-	private String advSubject ="XXÒøĞĞ¹úÇìĞÅÓÃ¿¨³é½±»î¶¯";
-	//¹ã¸æĞÅÄÚÈİ
-	private String advContext = "¹úÇì³é½±»î¶¯Í¨Öª£ºÖ»ÒªË¢¿¨¾ÍËÍÄã1°ÙÍò£¡....";
-	
+	//å¹¿å‘Šä¿¡åç§°
+	private String advSubject ="XXé“¶è¡Œå›½åº†ä¿¡ç”¨å¡æŠ½å¥–æ´»åŠ¨";
+	//å¹¿å‘Šä¿¡å†…å®¹
+	private String advContext = "å›½åº†æŠ½å¥–æ´»åŠ¨é€šçŸ¥ï¼šåªè¦åˆ·å¡å°±é€ä½ 1ç™¾ä¸‡ï¼....";
+
 	public String getAdvSubject() {
 		return advSubject;
 	}
-	
+
 	public String getAdvContext() {
 		return advContext;
 	}

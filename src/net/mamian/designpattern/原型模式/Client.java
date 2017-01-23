@@ -1,40 +1,46 @@
-package net.mamian.designpattern.Ô­ĞÍÄ£Ê½;
+package net.mamian.designpattern.åŸå‹æ¨¡å¼;
 
 import java.util.Random;
 
-/*
- * Ô­ĞÍÄ£Ê½£º²»Í¨¹ınew²úÉúĞÂ¶ÔÏó¶øÊÇÍ¨¹ıcloneÀ´ÊµÏÖµÄÄ£Ê½¼´ÎªÔ­ĞÍÄ£Ê½
- * ¶ÔÏó¿½±´Ê±£¬Æä¹¹ÔìÆ÷ÊÇ²»»áÖ´ĞĞµÄ
- * clone()Ç³¿½±´£ºObjectÀàÌá¹©clone·½·¨Ö»ÊÇ¿½±´±¾¶ÔÏó(±¾¶ÔÏóµÄint¡¢long¡¢StringµÈ³ÉÔ±)£¬Æä¶ÔÏóÄÚ²¿µÄÊı×é¡¢ÒıÓÃ¶ÔÏóµÈ¶¼²»¿½±´£¬»¹ÊÇÖ¸ÏòÔ­Éú¶ÔÏóµÄÄÚ²¿ÔªËØµØÖ·.
- * clone()Éî¿½±´£ºthing.arrayList = (ArrayList<String>)this.arrayList.clone();
- * ²»¿É¶Ôfinal³ÉÔ±Ö´ĞĞclone·½·¨
- * */
+/**
+ * åŸå‹æ¨¡å¼ï¼šä¸é€šè¿‡newäº§ç”Ÿæ–°å¯¹è±¡è€Œæ˜¯é€šè¿‡cloneæ¥å®ç°çš„æ¨¡å¼å³ä¸ºåŸå‹æ¨¡å¼
+ * å¯¹è±¡æ‹·è´æ—¶ï¼Œå…¶æ„é€ å™¨æ˜¯ä¸ä¼šæ‰§è¡Œçš„
+ * clone()æµ…æ‹·è´ï¼šObjectç±»æä¾›cloneæ–¹æ³•åªæ˜¯æ‹·è´æœ¬å¯¹è±¡(æœ¬å¯¹è±¡çš„intã€longã€Stringç­‰æˆå‘˜)ï¼Œå…¶å¯¹è±¡å†…éƒ¨çš„æ•°ç»„ã€å¼•ç”¨å¯¹è±¡ç­‰éƒ½ä¸æ‹·è´ï¼Œè¿˜æ˜¯æŒ‡å‘åŸç”Ÿå¯¹è±¡çš„å†…éƒ¨å…ƒç´ åœ°å€.
+ * clone()æ·±æ‹·è´ï¼šthing.arrayList = (ArrayList<String>)this.arrayList.clone();
+ * ä¸å¯å¯¹finalæˆå‘˜æ‰§è¡Œcloneæ–¹æ³•
+ *
+ * @author mamian
+ * @mail mamianskyma@aliyun.com
+ * @date 2017-01-23 23:35:29
+ * @copyright Â©2017 é©¬é¢ All Rights Reserved
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
 public class Client {
-	//·¢ËÍÕËµ¥µÄÊıÁ¿£¬Õâ¸öÖµÊÇ´ÓÊı¾İ¿âÖĞ»ñµÃ
+	//å‘é€è´¦å•çš„æ•°é‡ï¼Œè¿™ä¸ªå€¼æ˜¯ä»æ•°æ®åº“ä¸­è·å¾—
 	private static int MAX_COUNT = 6;
-	
+
 	public static void main(String[] args){
-		//Ä£Äâ·¢ËÍÓÊ¼ş
+		//æ¨¡æ‹Ÿå‘é€é‚®ä»¶
 		int i=0;
-		//°ÑÄ£°å¶¨Òå³öÀ´£¬Õâ¸öÊÇ´ÓÊı¾İ¿âÖĞ»ñµÃ
+		//æŠŠæ¨¡æ¿å®šä¹‰å‡ºæ¥ï¼Œè¿™ä¸ªæ˜¯ä»æ•°æ®åº“ä¸­è·å¾—
 		Mail mail = new Mail(new AdvTemplate());
-		mail.setTail("XXÒøĞĞ°æÈ¨ËùÓĞ");
+		mail.setTail("XXé“¶è¡Œç‰ˆæƒæ‰€æœ‰");
 		while(i<MAX_COUNT){
-			//ÒÔÏÂÊÇÃ¿·âÓÊ¼ş²»Í¬µÄµØ·½
+			//ä»¥ä¸‹æ˜¯æ¯å°é‚®ä»¶ä¸åŒçš„åœ°æ–¹
 			Mail cloneMail = mail.clone();
-			cloneMail.setAppellation(getRandString(5)+" ÏÈÉú£¨Å®Ê¿£©");
+			cloneMail.setAppellation(getRandString(5)+" å…ˆç”Ÿï¼ˆå¥³å£«ï¼‰");
 			cloneMail.setReceiver(getRandString(5) + "@" + getRandString(8)+".com");
-			//È»ºó·¢ËÍÓÊ¼ş
+			//ç„¶åå‘é€é‚®ä»¶
 			sendMail(cloneMail);
 			i++;
 		}
 	}
-	
-	//·¢ËÍÓÊ¼ş
+
+	//å‘é€é‚®ä»¶
 	public static void sendMail(Mail mail){
-		System.out.println("±êÌâ£º"+mail.getSubject() + "\tÊÕ¼şÈË£º"+mail.getReceiver()+"\t....·¢ËÍ³É¹¦£¡");
+		System.out.println("æ ‡é¢˜ï¼š"+mail.getSubject() + "\tæ”¶ä»¶äººï¼š"+mail.getReceiver()+"\t....å‘é€æˆåŠŸï¼");
 	}
-	//»ñµÃÖ¸¶¨³¤¶ÈµÄËæ»ú×Ö·û´®
+	//è·å¾—æŒ‡å®šé•¿åº¦çš„éšæœºå­—ç¬¦ä¸²
 	public static String getRandString(int maxLength){
 		String source ="abcdefghijklmnopqrskuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 		StringBuffer sb = new StringBuffer();
