@@ -1,20 +1,27 @@
-package net.mamian.designpattern.ÃüÁîÄ£Ê½;
-/*
- * ³éÏó·Ö×éÀà¼°Èı¸öÊµÏÖÀà£¨ĞèÇó×é¡¢Ò³Ãæ×é¡¢´úÂë×é£©
- * ³éÏóÃüÁîÀà¼°¶à¸öÊµÏÖÀà£¨Ôö¼ÓĞèÇóÃüÁî¡¢¼õÉÙÒ³ÃæÃüÁîµÈ£©
- * 
- * ÃüÁî½ÓÊÕÕßÀà£¬´ËÀàÖĞÓĞÒ»¸öË½ÓĞµÄÃüÁî³ÉÔ±ºÍÒ»¸ö´¥·¢·½·¨£¨´Ë·½·¨»áÖ´ĞĞË½ÓĞÃüÁî³ÉÔ±µÄÄ³¸ö·½·¨£©
- * */
+package net.mamian.designpattern.å‘½ä»¤æ¨¡å¼;
+
+/**
+ * æŠ½è±¡åˆ†ç»„ç±»åŠä¸‰ä¸ªå®ç°ç±»ï¼ˆéœ€æ±‚ç»„ã€é¡µé¢ç»„ã€ä»£ç ç»„ï¼‰
+ * æŠ½è±¡å‘½ä»¤ç±»åŠå¤šä¸ªå®ç°ç±»ï¼ˆå¢åŠ éœ€æ±‚å‘½ä»¤ã€å‡å°‘é¡µé¢å‘½ä»¤ç­‰ï¼‰
+ * <p/>
+ * å‘½ä»¤æ¥æ”¶è€…ç±»ï¼Œæ­¤ç±»ä¸­æœ‰ä¸€ä¸ªç§æœ‰çš„å‘½ä»¤æˆå‘˜å’Œä¸€ä¸ªè§¦å‘æ–¹æ³•ï¼ˆæ­¤æ–¹æ³•ä¼šæ‰§è¡Œç§æœ‰å‘½ä»¤æˆå‘˜çš„æŸä¸ªæ–¹æ³•ï¼‰
+ *
+ * @author mamian
+ * @mail mamianskyma@aliyun.com
+ * @date 2017-01-24 23:52:47
+ * @copyright Â©2017 é©¬é¢ All Rights Reserved
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
 public class Client {
-	public static void main(String[] args){
-		Invoker invoker = new Invoker();
-		
-		Command addRequirementCommand = new AddRequirementCommand();
-		invoker.setCommand(addRequirementCommand);
-		invoker.action();
-		
-		Command deletePageCommand = new DeletePageCommand();
-		invoker.setCommand(deletePageCommand);
-		invoker.action();
-	}
+    public static void main(String[] args) {
+        Invoker invoker = new Invoker();
+
+        Command addRequirementCommand = new AddRequirementCommand();
+        invoker.setCommand(addRequirementCommand);
+        invoker.action();
+
+        Command deletePageCommand = new DeletePageCommand();
+        invoker.setCommand(deletePageCommand);
+        invoker.action();
+    }
 }

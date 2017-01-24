@@ -1,28 +1,35 @@
-package net.mamian.designpattern.ÃüÁîÄ£Ê½;
+package net.mamian.designpattern.å‘½ä»¤æ¨¡å¼;
 
-public class RequirementGroup extends Group{
-	@Override
-	protected void find() {
-		System.out.println("ĞèÇó×é£ºÕÒµ½ĞèÇó×é£¡");
-	}
+/**
+ * @author mamian
+ * @mail mamianskyma@aliyun.com
+ * @date 2017-01-24 23:46:24
+ * @copyright Â©2017 é©¬é¢ All Rights Reserved
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
+public class RequirementGroup extends Group {
+    @Override
+    protected void find() {
+        System.out.println("éœ€æ±‚ç»„ï¼šæ‰¾åˆ°éœ€æ±‚ç»„ï¼");
+    }
 
-	@Override
-	protected void add() {
-		System.out.println("ĞèÇó×é£ºÔö¼ÓÒ»ÌõĞèÇó£¡");
-	}
+    @Override
+    protected void add() {
+        System.out.println("éœ€æ±‚ç»„ï¼šå¢åŠ ä¸€æ¡éœ€æ±‚ï¼");
+    }
 
-	@Override
-	protected void delete() {
-		System.out.println("ĞèÇó×é£º¼õÉÙÒ»ÌõĞèÇó£¡");
-	}
+    @Override
+    protected void delete() {
+        System.out.println("éœ€æ±‚ç»„ï¼šå‡å°‘ä¸€æ¡éœ€æ±‚ï¼");
+    }
 
-	@Override
-	protected void change() {
-		System.out.println("ĞèÇó×é£ºĞŞ¸ÄÒ»ÌõĞèÇó£¡");
-	}
+    @Override
+    protected void change() {
+        System.out.println("éœ€æ±‚ç»„ï¼šä¿®æ”¹ä¸€æ¡éœ€æ±‚ï¼");
+    }
 
-	@Override
-	protected void exe() {
-		System.out.println("ĞèÇó×é£ºÖ´ĞĞ¶ÔĞèÇóµÄ¸ü¸Ä£¡");
-	}
+    @Override
+    protected void exe() {
+        System.out.println("éœ€æ±‚ç»„ï¼šæ‰§è¡Œå¯¹éœ€æ±‚çš„æ›´æ”¹ï¼");
+    }
 }
