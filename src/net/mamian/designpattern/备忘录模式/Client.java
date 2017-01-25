@@ -1,14 +1,19 @@
 package net.mamian.designpattern.备忘录模式;
 
-/*
+/**
  * 备忘录模式：并不是在类A中增加一个A对象的实例a，而是将要备忘的具体属性单独抽出来，存放到一个新类B中
  * A不需要包含备忘对象B，只需在A中增加一个新建备忘B对象和由备忘B对象恢复当前属性信息的方法
- * 
- * 
+ * <p/>
  * 本示例中最后的sex没有恢复是因为没有将此属性加入到Memento类中，sex为不需要恢复的属性
- * */
+ *
+ * @author mamian
+ * @mail mamianskyma@aliyun.com
+ * @date 2017-01-25 11:01:28
+ * @copyright ©2017 马面 All Rights Reserved
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
 public class Client {
-	public static void main(String[] args){
+    public static void main(String[] args) {
         Boy boy = new Boy();
         MementoManager mementoManager = new MementoManager();
 
