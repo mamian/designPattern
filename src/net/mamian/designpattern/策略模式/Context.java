@@ -11,13 +11,14 @@ package net.mamian.designpattern.策略模式;
  * NOTICES OR THIS FILE HEADER.
  */
 public class Context {
-	Strategy myStrategy;
-	public Context(Strategy strategy) {
-		System.out.println("Context的构造方法执行！");
-		myStrategy = strategy;
-	}
-	
-	public void myOperate(){
-		myStrategy.operate();
-	}
+    Strategy myStrategy;
+
+    public Context(Strategy strategy) {
+        System.out.println("Context的构造方法执行！");
+        myStrategy = strategy;
+    }
+
+    public void myOperate() {
+        myStrategy.operate();
+    }
 }

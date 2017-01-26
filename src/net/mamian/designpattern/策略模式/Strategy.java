@@ -11,9 +11,9 @@ package net.mamian.designpattern.策略模式;
  * NOTICES OR THIS FILE HEADER.
  */
 public abstract class Strategy {
-	public Strategy() {
-		System.out.println("Strategy的构造方法执行！");
-	}
+    public Strategy() {
+        System.out.println("Strategy的构造方法执行！");
+    }
 
-	public abstract void operate();
+    public abstract void operate();
 }
