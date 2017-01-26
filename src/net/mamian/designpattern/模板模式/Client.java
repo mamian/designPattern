@@ -1,13 +1,20 @@
-package net.mamian.designpattern.Ä£°åÄ£Ê½;
-/*
- * Ä£°åÄ£Ê½£º³éÏó¸¸ÀàÖĞ¶¨ÒåºÃ¸÷×ÓÀàÒªÖ´ĞĞµÄÄ³Ò»¸öfinal·½·¨£¬´Ë·½·¨ÖĞµ÷ÓÃÁË³éÏó¸¸ÀàÖĞµÄÆäËû·½·¨£¬²¢ÇÒ·½·¨ÊÇÓĞĞòµÄ
- * */
+package net.mamian.designpattern.æ¨¡æ¿æ¨¡å¼;
+
+/**
+ * æ¨¡æ¿æ¨¡å¼ï¼šæŠ½è±¡çˆ¶ç±»ä¸­å®šä¹‰å¥½å„å­ç±»è¦æ‰§è¡Œçš„æŸä¸€ä¸ªfinalæ–¹æ³•ï¼Œæ­¤æ–¹æ³•ä¸­è°ƒç”¨äº†æŠ½è±¡çˆ¶ç±»ä¸­çš„å…¶ä»–æ–¹æ³•ï¼Œå¹¶ä¸”æ–¹æ³•æ˜¯æœ‰åºçš„
+ *
+ * @author mamian
+ * @mail mamianskyma@aliyun.com
+ * @date 2017-01-31 21:27:18
+ * @copyright Â©2017 é©¬é¢ All Rights Reserved
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
 public class Client {
-	public static void main(String[] args){
-		Model modelA = new ModelA();
-		modelA.run();
-		
-		Model modelB = new ModelB();
-		modelB.run();
-	}
+    public static void main(String[] args) {
+        Model modelA = new ModelA();
+        modelA.run();
+
+        Model modelB = new ModelB();
+        modelB.run();
+    }
 }

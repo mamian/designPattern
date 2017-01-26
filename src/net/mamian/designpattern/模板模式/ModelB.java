@@ -1,20 +1,27 @@
-package net.mamian.designpattern.模板模式;
+package net.mamian.designpattern.妯℃澘妯″紡;
 
-public class ModelB extends Model{
+/**
+ * @author mamian
+ * @mail mamianskyma@aliyun.com
+ * @date 2017-01-31 21:25:54
+ * @copyright 漏2017 椹潰 All Rights Reserved
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
+public class ModelB extends Model {
 
-	@Override
-	protected void start() {
-		System.out.println("车辆B启动");
-	}
+    @Override
+    protected void start() {
+        System.out.println("杞﹁締B鍚姩");
+    }
 
-	@Override
-	protected void alarm() {
-		System.out.println("车辆B鸣笛");
-	}
+    @Override
+    protected void alarm() {
+        System.out.println("杞﹁締B楦ｈ开");
+    }
 
-	@Override
-	protected void stop() {
-		System.out.println("车辆B刹车");
-	}
+    @Override
+    protected void stop() {
+        System.out.println("杞﹁締B鍒硅溅");
+    }
 
 }
