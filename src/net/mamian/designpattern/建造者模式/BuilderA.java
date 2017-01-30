@@ -1,17 +1,25 @@
-package net.mamian.designpattern.Ω®‘Ï’ﬂƒ£ Ω;
+package net.mamian.designpattern.Âª∫ÈÄ†ËÄÖÊ®°Âºè;
 
 import java.util.ArrayList;
 
-public class BuilderA extends Builder{
-	private ModelA modelA = new ModelA();
-	@Override
-	public void setSequence(ArrayList<String> sequence) {
-		modelA.setSequence(sequence);
-	}
+/**
+ * @author mamian
+ * @mail mamianskyma@aliyun.com
+ * @date 2017-01-28 20:21:43
+ * @copyright ¬©2017 È©¨Èù¢ All Rights Reserved
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
+public class BuilderA extends Builder {
+    private ModelA modelA = new ModelA();
 
-	@Override
-	public Model getModel() {
-		return modelA;
-	}
+    @Override
+    public void setSequence(ArrayList<String> sequence) {
+        modelA.setSequence(sequence);
+    }
+
+    @Override
+    public Model getModel() {
+        return modelA;
+    }
 
 }

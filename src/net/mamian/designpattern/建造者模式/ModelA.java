@@ -1,20 +1,27 @@
-package net.mamian.designpattern.½¨ÔìÕßÄ£Ê½;
+package net.mamian.designpattern.å»ºé€ è€…æ¨¡å¼;
 
-public class ModelA extends Model{
+/**
+ * @author mamian
+ * @mail mamianskyma@aliyun.com
+ * @date 2017-01-28 20:16:32
+ * @copyright Â©2017 é©¬é¢ All Rights Reserved
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
+public class ModelA extends Model {
 
-	@Override
-	protected void start() {
-		System.out.println("³µÁ¾AÆô¶¯");
-	}
+    @Override
+    protected void start() {
+        System.out.println("è½¦è¾†Aå¯åŠ¨");
+    }
 
-	@Override
-	protected void alarm() {
-		System.out.println("³µÁ¾AÃùµÑ");
-	}
+    @Override
+    protected void alarm() {
+        System.out.println("è½¦è¾†Aé¸£è¿ª");
+    }
 
-	@Override
-	protected void stop() {
-		System.out.println("³µÁ¾AÉ²³µ");
-	}
+    @Override
+    protected void stop() {
+        System.out.println("è½¦è¾†Aåˆ¹è½¦");
+    }
 
 }

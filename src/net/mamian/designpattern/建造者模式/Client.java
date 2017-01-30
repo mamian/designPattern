@@ -1,29 +1,36 @@
-package net.mamian.designpattern.½¨ÔìÕßÄ£Ê½;
+package net.mamian.designpattern.å»ºé€ è€…æ¨¡å¼;
 
 import java.util.ArrayList;
 
-/*
- * ÓëÄ£°åÄ£Ê½ÀàËÆ£¬½¨ÔìÕßÄ£Ê½Ôö¼ÓÁË½¨ÔìÕß
- * ½¨ÔìÕßÊµÏÖÁ½¸ö·½·¨£ºÒ»¸ö·µ»ØÒª½¨ÔìµÄ¶ÔÏó£¬ÁíÒ»¸öÉèÖÃÒª½¨ÔìµÄ¶ÔÏóÖĞµÄÍ¨ÓÃ·½·¨ÖĞµ÷ÓÃ×ÔÉí·½·¨µÄË³Ğò*/
+/**
+ * ä¸æ¨¡æ¿æ¨¡å¼ç±»ä¼¼ï¼Œå»ºé€ è€…æ¨¡å¼å¢åŠ äº†å»ºé€ è€…
+ * å»ºé€ è€…å®ç°2ä¸ªæ–¹æ³•ï¼šä¸€ä¸ªè¿”å›è¦å»ºé€ çš„å¯¹è±¡ï¼Œå¦ä¸€ä¸ªè®¾ç½®è¦å»ºé€ çš„å¯¹è±¡ä¸­çš„é€šç”¨æ–¹æ³•ä¸­è°ƒç”¨è‡ªèº«æ–¹æ³•çš„é¡ºåº
+ *
+ * @author mamian
+ * @mail mamianskyma@aliyun.com
+ * @date 2017-01-28 20:31:12
+ * @copyright Â©2017 é©¬é¢ All Rights Reserved
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
 public class Client {
-	public static void main(String[] args){
-		ArrayList<String> sequence1 = new ArrayList<String>();
-		sequence1.add("alarm");
-		sequence1.add("start");
-		sequence1.add("stop");
-		
-		Builder builderA = new BuilderA();
-		builderA.setSequence(sequence1);
-		builderA.getModel().run();
-		
-		
-		ArrayList<String> sequence2 = new ArrayList<String>();
-		sequence2.add("start");
-		sequence2.add("alarm");
-		sequence2.add("stop");
-		
-		Builder builderB = new BuilderB();
-		builderB.setSequence(sequence2);
-		builderB.getModel().run();
-	}
+    public static void main(String[] args) {
+        ArrayList<String> sequence1 = new ArrayList<>();
+        sequence1.add("alarm");
+        sequence1.add("start");
+        sequence1.add("stop");
+
+        Builder builderA = new BuilderA();
+        builderA.setSequence(sequence1);
+        builderA.getModel().run();
+
+
+        ArrayList<String> sequence2 = new ArrayList<>();
+        sequence2.add("start");
+        sequence2.add("alarm");
+        sequence2.add("stop");
+
+        Builder builderB = new BuilderB();
+        builderB.setSequence(sequence2);
+        builderB.getModel().run();
+    }
 }
