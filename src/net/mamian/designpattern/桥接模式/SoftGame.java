@@ -1,9 +1,16 @@
-package net.mamian.designpattern.ÇÅ½ÓÄ£Ê½;
+package net.mamian.designpattern.æ¡¥æ¥æ¨¡å¼;
 
-public class SoftGame implements Soft{
-	@Override
-	public void softRun() {
-		System.out.println("ÊÖ»úÓÎÏ·¿ªÊ¼ÔËĞĞ");
-	}
+/**
+ * @author mamian
+ * @mail mamianskyma@aliyun.com
+ * @date 2017-01-30 19:23:39
+ * @copyright Â©2017 é©¬é¢ All Rights Reserved
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
+public class SoftGame implements Soft {
+    @Override
+    public void softRun() {
+        System.out.println("æ‰‹æœºæ¸¸æˆå¼€å§‹è¿è¡Œ");
+    }
 
 }

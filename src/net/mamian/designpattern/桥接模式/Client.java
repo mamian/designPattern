@@ -1,23 +1,30 @@
-package net.mamian.designpattern.ÇÅ½ÓÄ£Ê½;
-/*
- * ÊÖ»úÆ·ÅÆ£¨Æ·ÅÆA¡¢Æ·ÅÆB£©ÓëÊÖ»úÈí¼ş£¨ÓÎÏ·¡¢Í¨Ñ¶Â¼£©ÊÇ¾ÛºÏ¹ØÏµ
- * ÊÖ»úÆ·ÅÆ°üº¬ÊÖ»úÈí¼ş£ºÆ·ÅÆ<>-------Èí¼ş*/
+package net.mamian.designpattern.æ¡¥æ¥æ¨¡å¼;
+
+/**
+ * æ‰‹æœºå“ç‰Œï¼ˆå“ç‰ŒAã€å“ç‰ŒBï¼‰ä¸æ‰‹æœºè½¯ä»¶ï¼ˆæ¸¸æˆã€é€šè®¯å½•ï¼‰æ˜¯èšåˆå…³ç³»
+ * æ‰‹æœºå“ç‰ŒåŒ…å«æ‰‹æœºè½¯ä»¶ï¼šå“ç‰Œ<>------è½¯ä»¶
+ *
+ * @author mamian
+ * @mail mamianskyma@aliyun.com
+ * @date 2017-01-30 19:25:29
+ * @copyright Â©2017 é©¬é¢ All Rights Reserved
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
 public class Client {
-	public static void main(String[] args){
-		Brand brandA = new BrandA();
-		
-		brandA.setSoft(new SoftGame());
-		brandA.brandRun();
-		
-		brandA.setSoft(new SoftAddressList());
-		brandA.brandRun();
-		
-		
-		
-		Brand brandB = new BrandB();
-		brandB.setSoft(new SoftGame());
-		brandB.brandRun();
-		brandB.setSoft(new SoftAddressList());
-		brandB.brandRun();
-	}
+    public static void main(String[] args) {
+        Brand brandA = new BrandA();
+
+        brandA.setSoft(new SoftGame());
+        brandA.brandRun();
+
+        brandA.setSoft(new SoftAddressList());
+        brandA.brandRun();
+
+
+        Brand brandB = new BrandB();
+        brandB.setSoft(new SoftGame());
+        brandB.brandRun();
+        brandB.setSoft(new SoftAddressList());
+        brandB.brandRun();
+    }
 }

@@ -1,11 +1,19 @@
-package net.mamian.designpattern.桥接模式;
+package net.mamian.designpattern.妗ユ帴妯″紡;
 
+/**
+ * @author mamian
+ * @mail mamianskyma@aliyun.com
+ * @date 2017-01-30 19:13:35
+ * @copyright 漏2017 椹潰 All Rights Reserved
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
 public abstract class Brand {
-	protected Soft soft;
-	
-	//或通过带参构造方法设置soft
-	public void setSoft(Soft soft){
-		this.soft = soft;
-	}
-	public abstract void brandRun();
+    protected Soft soft;
+
+    //鎴栭�氳繃甯﹀弬鏋勯�犳柟娉曡缃畇oft
+    public void setSoft(Soft soft) {
+        this.soft = soft;
+    }
+
+    public abstract void brandRun();
 }
