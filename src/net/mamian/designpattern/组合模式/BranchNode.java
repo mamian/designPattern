@@ -13,17 +13,17 @@ import java.util.List;
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
  */
 public class BranchNode extends Node {
-	private List<Node> subNodeList = new ArrayList<Node>();
-	
-	public BranchNode(String branchNodeName,String branchNodeId) {
-		super(branchNodeName,branchNodeId);
-	}
-	
-	public void addSubNode(Node subNode){
-		subNodeList.add(subNode);
-	}
-	
-	public List<Node> getSubNodeList(){
-		return subNodeList;
-	}
+    private List<Node> subNodeList = new ArrayList<>();
+
+    public BranchNode(String branchNodeName, String branchNodeId) {
+        super(branchNodeName, branchNodeId);
+    }
+
+    public void addSubNode(Node subNode) {
+        subNodeList.add(subNode);
+    }
+
+    public List<Node> getSubNodeList() {
+        return subNodeList;
+    }
 }

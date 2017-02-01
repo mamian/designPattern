@@ -14,13 +14,13 @@ public abstract class Node {
     private String nodeName;
     private String nodeId;
 
-    public Node(String nodeName,String nodeId) {
+    public Node(String nodeName, String nodeId) {
         this.nodeId = nodeId;
         this.nodeName = nodeName;
     }
 
-    public String getNodeInfo(){
-        String nodeInfo = "节点名称："+nodeName+"  节点Id："+nodeId;
+    public String getNodeInfo() {
+        String nodeInfo = "节点名称：" + nodeName + "  节点Id：" + nodeId;
         return nodeInfo;
     }
 

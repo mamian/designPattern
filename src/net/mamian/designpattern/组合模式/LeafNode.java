@@ -11,8 +11,8 @@ package net.mamian.designpattern.组合模式;
  */
 public class LeafNode extends Node {
 
-	public LeafNode(String leafNodeName,String leafNodeId) {
-		super(leafNodeName,leafNodeId);
-	}
+    public LeafNode(String leafNodeName, String leafNodeId) {
+        super(leafNodeName, leafNodeId);
+    }
 
 }
