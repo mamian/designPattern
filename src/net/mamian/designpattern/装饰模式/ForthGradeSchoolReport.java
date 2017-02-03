@@ -1,14 +1,21 @@
-package net.mamian.designpattern.装饰模式;
+package net.mamian.designpattern.瑁呴グ妯″紡;
 
-public class ForthGradeSchoolReport extends SchoolReport{
-	@Override
-	public void getReportInfo() {
-		System.out.println("尊敬的XXX家长，您儿子的成绩为:");
-		System.out.println("语文 62 数学65 体育 98 自然 63");
-	}
+/**
+ * @author mamian
+ * @mail mamianskyma@aliyun.com
+ * @date 2017-02-03 20:07:54
+ * @copyright 漏2017 椹潰 All Rights Reserved
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
+public class ForthGradeSchoolReport extends SchoolReport {
+    @Override
+    public void getReportInfo() {
+        System.out.println("灏婃暚鐨刋XX瀹堕暱锛屾偍鍎垮瓙鐨勬垚缁╀负:");
+        System.out.println("璇枃 62 鏁板65 浣撹偛 98 鑷劧 63");
+    }
 
-	@Override
-	public void parentSign(String parentName) {
-		System.out.println("家长签字为："+parentName);
-	}
+    @Override
+    public void parentSign(String parentName) {
+        System.out.println("瀹堕暱绛惧瓧涓猴細" + parentName);
+    }
 }

@@ -1,20 +1,27 @@
-package net.mamian.designpattern.×°ÊÎÄ£Ê½;
+package net.mamian.designpattern.è£…é¥°æ¨¡å¼;
 
-public class SortDecorator extends Decorator{
+/**
+ * @author mamian
+ * @mail mamianskyma@aliyun.com
+ * @date 2017-02-03 20:11:34
+ * @copyright Â©2017 é©¬é¢ All Rights Reserved
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
+public class SortDecorator extends Decorator {
 
-	public SortDecorator(SchoolReport schoolReport) {
-		super(schoolReport);
-	}
-	
-	private void sugarSort(){
-		System.out.println("ÎÒÊÇÅÅÃûµÚ38Ãû...");
-	}
-	
-	@Override
-	public void getReportInfo() {
-		System.out.println("×°ÊÎÆ÷2¿ªÊ¼22222222222222222222222222222222222");
-		sugarSort();//´ËÎªÒª×°ÊÎµÄ·½·¨2
-		super.getReportInfo();
-		System.out.println("×°ÊÎÆ÷2½áÊø22222222222222222222222222222222222");
-	}
+    public SortDecorator(SchoolReport schoolReport) {
+        super(schoolReport);
+    }
+
+    private void sugarSort() {
+        System.out.println("æˆ‘æ˜¯æ’åç¬¬38å...");
+    }
+
+    @Override
+    public void getReportInfo() {
+        System.out.println("è£…é¥°å™¨2å¼€å§‹22222222222222222222222222222222222");
+        sugarSort();//æ­¤ä¸ºè¦è£…é¥°çš„æ–¹æ³•2
+        super.getReportInfo();
+        System.out.println("è£…é¥°å™¨2ç»“æŸ22222222222222222222222222222222222");
+    }
 }

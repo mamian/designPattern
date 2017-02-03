@@ -1,23 +1,30 @@
-package net.mamian.designpattern.×°ÊÎÄ£Ê½;
-/*
- * Îª¾ÉÓĞµÄÀàÌí¼ÓĞÂµÄ¹¦ÄÜ:Ğ¡²Ë´©ÒÂ
- * ¾ÉÀàÎªA£¬ÒªÎªAÌí¼ÓĞÂ¹¦ÄÜ
- * ³éÏó×°ÊÎÀàDecorator¼Ì³ĞAµÄ¸¸ÀàÇÒ°üº¬Ò»¸öA¸¸ÀàÊôĞÔ
- * ¾ßÌåµÄ×°ÊÎÀàDecorator1¼Ì³Ğ³éÏó×°ÊÎÀàDecorator£¬ÇÒ¸²¸Ç¾ÉÀàAµÄÄ³¸öÒªĞŞ¸ÄµÄ·½·¨£¨ÔÚsuper.method()Ç°»òºóÔö¼ÓÒªÔö¼ÓµÄ¹¦ÄÜ£©
- * ¾ßÌåµÄ×°ÊÎÀàDecorator2¼Ì³Ğ³éÏó×°ÊÎÀàDecorator£¬ÇÒ¸²¸Ç¾ÉÀàAÍ¬Ò»¸öÒªĞŞ¸ÄµÄ·½·¨£¨ÔÚsuper.method()Ç°»òºóÔö¼ÓÒªÔö¼ÓµÄ¹¦ÄÜ£©
- * 
- * ¿Í»§¶ËÀàÖĞnew¾ÉÀàAµÄ¸¸Àà¶ÔÏó£¬²¢ÒÀ´Î¸³ÖµÎªnew A(),new Decorator1(),new Decorator2()
- * ÔÙÖ´ĞĞA¶ÔÏóµÄ±»×°ÊÎµÄ·½·¨¼´¿É
- * */
+package net.mamian.designpattern.è£…é¥°æ¨¡å¼;
+
+/**
+ * ä¸ºæ—§æœ‰çš„ç±»æ·»åŠ æ–°çš„åŠŸèƒ½:å°èœç©¿è¡£
+ * æ—§ç±»ä¸ºAï¼Œè¦ä¸ºAæ·»åŠ æ–°åŠŸèƒ½
+ * æŠ½è±¡è£…é¥°ç±»Decoratorç»§æ‰¿Açš„çˆ¶ç±»ä¸”åŒ…å«ä¸€ä¸ªAçˆ¶ç±»å±æ€§
+ * å…·ä½“çš„è£…é¥°ç±»Decorator1ç»§æ‰¿æŠ½è±¡è£…é¥°ç±»Decoratorï¼Œä¸”è¦†ç›–æ—§ç±»Açš„æŸä¸ªè¦ä¿®æ”¹çš„æ–¹æ³•ï¼ˆåœ¨super.method()å‰æˆ–åå¢åŠ è¦å¢åŠ çš„åŠŸèƒ½ï¼‰
+ * å…·ä½“çš„è£…é¥°ç±»Decorator2ç»§æ‰¿æŠ½è±¡è£…é¥°ç±»Decoratorï¼Œä¸”è¦†ç›–æ—§ç±»AåŒä¸€ä¸ªè¦ä¿®æ”¹çš„æ–¹æ³•ï¼ˆåœ¨super.method()å‰æˆ–åå¢åŠ è¦å¢åŠ çš„åŠŸèƒ½ï¼‰
+ * <p/>
+ * å®¢æˆ·ç«¯ç±»ä¸­newæ—§ç±»Açš„çˆ¶ç±»å¯¹è±¡ï¼Œå¹¶ä¾æ¬¡èµ‹å€¼ä¸ºnew A(),new Decorator1(),new Decorator2()
+ * å†æ‰§è¡ŒAå¯¹è±¡çš„è¢«è£…é¥°çš„æ–¹æ³•å³å¯
+ *
+ * @author mamian
+ * @mail mamianskyma@aliyun.com
+ * @date 2017-02-03 20:12:53
+ * @copyright Â©2017 é©¬é¢ All Rights Reserved
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
 public class Client {
-	public static void main(String[] args){
-		SchoolReport schoolReport;
-		
-		schoolReport = new ForthGradeSchoolReport();
-		schoolReport = new ScoreDecorator(schoolReport);//´ËÎªÒª×°ÊÎµ½Ô­ÀàÖĞµÄĞÂ¹¦ÄÜ1
-		schoolReport = new SortDecorator(schoolReport);//´ËÎªÒª×°ÊÎµ½Ô­ÀàÖĞµÄĞÂ¹¦ÄÜ2
-		
-		schoolReport.getReportInfo();
-		schoolReport.parentSign("¼Ò³¤µÄÃû×Ö");
-	}
+    public static void main(String[] args) {
+        SchoolReport schoolReport;
+
+        schoolReport = new ForthGradeSchoolReport();
+        schoolReport = new ScoreDecorator(schoolReport);//æ­¤ä¸ºè¦è£…é¥°åˆ°åŸç±»ä¸­çš„æ–°åŠŸèƒ½1
+        schoolReport = new SortDecorator(schoolReport);//æ­¤ä¸ºè¦è£…é¥°åˆ°åŸç±»ä¸­çš„æ–°åŠŸèƒ½2
+
+        schoolReport.getReportInfo();
+        schoolReport.parentSign("å®¶é•¿çš„åå­—");
+    }
 }

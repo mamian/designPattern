@@ -1,9 +1,16 @@
-package net.mamian.designpattern.×°ÊÎÄ£Ê½;
-/*
- * ³É¼¨µ¥¸¸Àà£¬°üº¬»ñÈ¡³É¼¨ĞÅÏ¢¡¢¼Ò³¤Ç©×Ö¹¦ÄÜ
- * 
- * */
+package net.mamian.designpattern.è£…é¥°æ¨¡å¼;
+
+/**
+ * æˆç»©å•çˆ¶ç±»ï¼ŒåŒ…å«è·å–æˆç»©ä¿¡æ¯ã€å®¶é•¿ç­¾å­—åŠŸèƒ½
+ *
+ * @author mamian
+ * @mail mamianskyma@aliyun.com
+ * @date 2017-02-03 20:04:09
+ * @copyright Â©2017 é©¬é¢ All Rights Reserved
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
 public abstract class SchoolReport {
-	public abstract void getReportInfo();
-	public abstract void parentSign(String parentName);
+    public abstract void getReportInfo();
+
+    public abstract void parentSign(String parentName);
 }
