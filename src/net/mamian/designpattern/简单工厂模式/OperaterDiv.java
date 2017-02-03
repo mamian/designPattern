@@ -1,8 +1,15 @@
-package net.mamian.designpattern.¼òµ¥¹¤³§Ä£Ê½;
+package net.mamian.designpattern.ç®€å•å·¥å‚æ¨¡å¼;
 
-public class OperaterDiv extends Operater{
-	public int getResult(int divA,int divB){
-		System.out.println("³ı·¨");
-		return divA/divB;
-	}
+/**
+ * @author mamian
+ * @mail mamianskyma@aliyun.com
+ * @date 2017-02-02 20:14:26
+ * @copyright Â©2017 é©¬é¢ All Rights Reserved
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
+public class OperaterDiv extends Operater {
+    public int getResult(int divA, int divB) {
+        System.out.println("é™¤æ³•");
+        return divA / divB;
+    }
 }
