@@ -1,42 +1,51 @@
-package net.mamian.designpattern.½âÊÍÆ÷Ä£Ê½;
+package net.mamian.designpattern.è§£é‡Šå™¨æ¨¡å¼;
 
 import java.util.HashMap;
 import java.util.Stack;
 
+/**
+ * @author mamian
+ * @mail mamianskyma@aliyun.com
+ * @date 2017-02-05 20:35:11
+ * @copyright Â©2017 é©¬é¢ All Rights Reserved
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
 public class Calculator {
-	//¶¨ÒåµÄ±í´ïÊ½
-	private Expression expression;
-	//¹¹Ôìº¯Êı´«²Î,²¢½âÎö
-	public Calculator(String expStr){
-		//¶¨ÒåÒ»¸ö¶ÑÕ»£¬°²ÅÅÔËËãµÄÏÈºóË³Ğò
-		Stack<Expression> stack = new Stack<Expression>();
-		//±í´ïÊ½²ğ·ÖÎª×Ö·ûÊı×é
-		char[] charArray = expStr.toCharArray();
-		//ÔËËã
-		Expression left = null;
-		Expression right = null;
-		for(int i=0;i<charArray.length;i++){
-			switch(charArray[i]) {
-				case '+': //¼Ó·¨
-					//¼Ó·¨½á¹û·Åµ½¶ÑÕ»ÖĞ
-					left = stack.pop();
-					right = new VarExpression(String.valueOf(charArray[++i]));
-					stack.push(new AddExpression(left,right));
-					break;
-				case '-':
-					left = stack.pop();
-					right = new VarExpression(String.valueOf(charArray[++i]));
-					stack.push(new SubExpression(left,right));
-					break;
-				default: //¹«Ê½ÖĞµÄ±äÁ¿
-					stack.push(new VarExpression(String.valueOf(charArray[i])));
-			}
-		}
-		//°ÑÔËËã½á¹ûÅ×³öÀ´
-		this.expression = stack.pop();
-	}
-	//¿ªÊ¼ÔËËã
-	public int run(HashMap<String,Integer> var){
-		return this.expression.interpreter(var);
-	}
+    //å®šä¹‰çš„è¡¨è¾¾å¼
+    private Expression expression;
+
+    //æ„é€ å‡½æ•°ä¼ å‚,å¹¶è§£æ
+    public Calculator(String expStr) {
+        //å®šä¹‰ä¸€ä¸ªå †æ ˆï¼Œå®‰æ’è¿ç®—çš„å…ˆåé¡ºåº
+        Stack<Expression> stack = new Stack<Expression>();
+        //è¡¨è¾¾å¼æ‹†åˆ†ä¸ºå­—ç¬¦æ•°ç»„
+        char[] charArray = expStr.toCharArray();
+        //è¿ç®—
+        Expression left = null;
+        Expression right = null;
+        for (int i = 0; i < charArray.length; i++) {
+            switch (charArray[i]) {
+                case '+': //åŠ æ³•
+                    //åŠ æ³•ç»“æœæ”¾åˆ°å †æ ˆä¸­
+                    left = stack.pop();
+                    right = new VarExpression(String.valueOf(charArray[++i]));
+                    stack.push(new AddExpression(left, right));
+                    break;
+                case '-':
+                    left = stack.pop();
+                    right = new VarExpression(String.valueOf(charArray[++i]));
+                    stack.push(new SubExpression(left, right));
+                    break;
+                default: //å…¬å¼ä¸­çš„å˜é‡
+                    stack.push(new VarExpression(String.valueOf(charArray[i])));
+            }
+        }
+        //æŠŠè¿ç®—ç»“æœæŠ›å‡ºæ¥
+        this.expression = stack.pop();
+    }
+
+    //å¼€å§‹è¿ç®—
+    public int run(HashMap<String, Integer> var) {
+        return this.expression.interpreter(var);
+    }
 }

@@ -1,41 +1,47 @@
-package net.mamian.designpattern.½âÊÍÆ÷Ä£Ê½;
+package net.mamian.designpattern.è§£é‡Šå™¨æ¨¡å¼;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.HashMap;
 import java.io.InputStreamReader;
 
-/*
- * ½âÊÍÆ÷Ä£Ê½£º²»³£ÓÃ
- * */
+/**
+ * è§£é‡Šå™¨æ¨¡å¼ï¼šä¸å¸¸ç”¨
+ *
+ * @author mamian
+ * @mail mamianskyma@aliyun.com
+ * @date 2017-02-05 20:38:27
+ * @copyright Â©2017 é©¬é¢ All Rights Reserved
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
 public class Client {
-	public static void main(String[] args) throws IOException{
-		String expStr = getExpStr();
-		//¸³Öµ
-		HashMap<String,Integer> var = getValue(expStr);
-		Calculator cal = new Calculator(expStr);
-		System.out.println("ÔËËã½á¹ûÎª£º"+expStr +"="+cal.run(var));
-	}
-	
-	//»ñµÃ±í´ïÊ½
-	public static String getExpStr() throws IOException{
-		System.out.print("ÇëÊäÈë±í´ïÊ½£º");
-		return (new BufferedReader(new InputStreamReader(System.in))).readLine();
-	}
-	
-	//»ñµÃÖµÓ³Éä
-	public static HashMap<String,Integer> getValue(String exprStr) throws IOException{
-		HashMap<String,Integer> map = new HashMap<String,Integer>();
-		//½âÎöÓĞ¼¸¸ö²ÎÊıÒª´«µİ
-		for(char ch:exprStr.toCharArray()){
-			if(ch != '+' && ch != '-'){
-				if(!map.containsKey(String.valueOf(ch))){ //½â¾öÖØ¸´²ÎÊıµÄÎÊÌâ
-					System.out.print("ÇëÊäÈë"+ch+"µÄÖµ:");
-					String in = (new BufferedReader(new InputStreamReader(System.in))).readLine();
-					map.put(String.valueOf(ch),Integer.valueOf(in));
-				}
-			}
-		}
-		return map;
-	}
+    public static void main(String[] args) throws IOException {
+        String expStr = getExpStr();
+        //èµ‹å€¼
+        HashMap<String, Integer> var = getValue(expStr);
+        Calculator cal = new Calculator(expStr);
+        System.out.println("è¿ç®—ç»“æœä¸ºï¼š" + expStr + "=" + cal.run(var));
+    }
+
+    //è·å¾—è¡¨è¾¾å¼
+    public static String getExpStr() throws IOException {
+        System.out.print("è¯·è¾“å…¥è¡¨è¾¾å¼ï¼š");
+        return (new BufferedReader(new InputStreamReader(System.in))).readLine();
+    }
+
+    //è·å¾—å€¼æ˜ å°„
+    public static HashMap<String, Integer> getValue(String exprStr) throws IOException {
+        HashMap<String, Integer> map = new HashMap<String, Integer>();
+        //è§£ææœ‰å‡ ä¸ªå‚æ•°è¦ä¼ é€’
+        for (char ch : exprStr.toCharArray()) {
+            if (ch != '+' && ch != '-') {
+                if (!map.containsKey(String.valueOf(ch))) { //è§£å†³é‡å¤å‚æ•°çš„é—®é¢˜
+                    System.out.print("è¯·è¾“å…¥" + ch + "çš„å€¼:");
+                    String in = (new BufferedReader(new InputStreamReader(System.in))).readLine();
+                    map.put(String.valueOf(ch), Integer.valueOf(in));
+                }
+            }
+        }
+        return map;
+    }
 }

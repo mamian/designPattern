@@ -1,8 +1,15 @@
-package net.mamian.designpattern.½âÊÍÆ÷Ä£Ê½;
+package net.mamian.designpattern.è§£é‡Šå™¨æ¨¡å¼;
 
 import java.util.HashMap;
 
+/**
+ * @author mamian
+ * @mail mamianskyma@aliyun.com
+ * @date 2017-02-05 20:27:10
+ * @copyright Â©2017 é©¬é¢ All Rights Reserved
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
 public abstract class Expression {
-	//½âÎö¹«Ê½ºÍÊıÖµ,ÆäÖĞvarÖĞµÄkeyÖµÊÇÊÇ¹«Ê½ÖĞµÄ²ÎÊı£¬valueÖµÊÇ¾ßÌåµÄÊı×Ö
-	public abstract int interpreter(HashMap<String,Integer> map);
+    //è§£æå…¬å¼å’Œæ•°å€¼,å…¶ä¸­varä¸­çš„keyå€¼æ˜¯æ˜¯å…¬å¼ä¸­çš„å‚æ•°ï¼Œvalueå€¼æ˜¯å…·ä½“çš„æ•°å­—
+    public abstract int interpreter(HashMap<String, Integer> map);
 }

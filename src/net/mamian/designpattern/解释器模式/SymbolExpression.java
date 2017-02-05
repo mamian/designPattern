@@ -1,11 +1,18 @@
-package net.mamian.designpattern.Ω‚ Õ∆˜ƒ£ Ω;
+package net.mamian.designpattern.Ëß£ÈáäÂô®Ê®°Âºè;
 
-public abstract class SymbolExpression extends Expression{
-	protected Expression left;
-	protected Expression right;
-	
-	public SymbolExpression(Expression left,Expression right){
-		this.left = left;
-		this.right = right;
-	}
+/**
+ * @author mamian
+ * @mail mamianskyma@aliyun.com
+ * @date 2017-02-05 20:32:07
+ * @copyright ¬©2017 È©¨Èù¢ All Rights Reserved
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
+public abstract class SymbolExpression extends Expression {
+    protected Expression left;
+    protected Expression right;
+
+    public SymbolExpression(Expression left, Expression right) {
+        this.left = left;
+        this.right = right;
+    }
 }
