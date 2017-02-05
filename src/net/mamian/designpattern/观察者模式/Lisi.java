@@ -1,16 +1,22 @@
-package net.mamian.designpattern.¹Û²ìÕßÄ£Ê½;
+package net.mamian.designpattern.è§‚å¯Ÿè€…æ¨¡å¼;
 
 import java.util.Observable;
 import java.util.Observer;
 
-/*
- * ¹Û²ìÕß¶ÔÏó£¬ÊµÏÖObserver½Ó¿ÚµÄupdate(Observable observable, Object arg1)·½·¨£¬µÚÒ»¸ö²ÎÊıÎªÆäËù¹Û²ìµÄ¶ÔÏó£¬µÚ¶ş¸ö²ÎÊıÎª±»¹Û²ìÕß¶ÔÏó´«µİ¸ø×Ô¼ºµÄĞÅÏ¢
- * */
-public class Lisi implements Observer{
-	@Override
-	public void update(Observable observable, Object arg1) {
-		System.out.println("Lisi¹Û²ìÕßÀîË¹¹Û²ìµ½±»¹Û²ìÕßº«·Ç×Ó¿ªÊ¼½øĞĞ»î¶¯ÁË£º"+arg1.toString());
-		System.out.println("Lisi¹Û²ìÕßÀîË¹¹Û²ìÍê±Ï£¡");
-		System.out.println("Lisi=====================================================");
-	}
+/**
+ * è§‚å¯Ÿè€…å¯¹è±¡ï¼Œå®ç°Observeræ¥å£çš„update(Observable observable, Object arg1)æ–¹æ³•ï¼Œç¬¬ä¸€ä¸ªå‚æ•°ä¸ºå…¶æ‰€è§‚å¯Ÿçš„å¯¹è±¡ï¼Œç¬¬äºŒä¸ªå‚æ•°ä¸ºè¢«è§‚å¯Ÿè€…å¯¹è±¡ä¼ é€’ç»™è‡ªå·±çš„ä¿¡æ¯
+ *
+ * @author mamian
+ * @mail mamianskyma@aliyun.com
+ * @date 2017-02-04 20:51:38
+ * @copyright Â©2017 é©¬é¢ All Rights Reserved
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
+public class Lisi implements Observer {
+    @Override
+    public void update(Observable observable, Object arg1) {
+        System.out.println("Lisiè§‚å¯Ÿè€…ææ–¯è§‚å¯Ÿåˆ°è¢«è§‚å¯Ÿè€…éŸ©éå­å¼€å§‹è¿›è¡Œæ´»åŠ¨äº†ï¼š" + arg1.toString());
+        System.out.println("Lisiè§‚å¯Ÿè€…ææ–¯è§‚å¯Ÿå®Œæ¯•ï¼");
+        System.out.println("Lisi=====================================================");
+    }
 }

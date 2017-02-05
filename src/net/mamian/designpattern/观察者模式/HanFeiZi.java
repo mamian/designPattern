@@ -1,30 +1,35 @@
-package net.mamian.designpattern.¹Û²ìÕßÄ£Ê½;
+package net.mamian.designpattern.è§‚å¯Ÿè€…æ¨¡å¼;
 
 import java.util.Observable;
 
-/*
- * ÕâÊÇ±»¹Û²ìÕß£¬¼Ì³ĞObservableÀà
- * 
- * Í¨ÖªÄÇĞ©ÕıÔÚ¹Û²ì×Ô¼ºµÄ¹Û²ìÕß£¬×Ô¼ºÒÑ¾­·¢Éú¸Ä±äÁË£¬²¢´«µİÒ»Ğ©ĞÅÏ¢¸øÄÇĞ©¹Û²ìÕß
+/**
+ * è¿™æ˜¯è¢«è§‚å¯Ÿè€…ï¼Œç»§æ‰¿Observableç±»
+ * <p/>
+ * é€šçŸ¥é‚£äº›æ­£åœ¨è§‚å¯Ÿè‡ªå·±çš„è§‚å¯Ÿè€…ï¼Œè‡ªå·±å·²ç»å‘ç”Ÿæ”¹å˜äº†ï¼Œå¹¶ä¼ é€’ä¸€äº›ä¿¡æ¯ç»™é‚£äº›è§‚å¯Ÿè€…
  * super.setChanged();
- * super.notifyObservers("HaiFeiZi±»¹Û²ìÕßº«·Ç×ÓÔÚ½øĞĞ»î¶¯1Ê±£¬´«µİ¸ø¸÷Î»¹Û²ìÕßµÄĞÅÏ¢£¡");
- * 
- * */
-public class HanFeiZi extends Observable{
-	
-	public void activeOne(){
-		System.out.println("HaiFeiZi±»¹Û²ìÕßº«·Ç×ÓÕıÔÚ½øĞĞ»î¶¯1.");
-		
-		//Í¨ÖªËùÓĞµÄ¹Û²ìÕß
-		super.setChanged();
-		super.notifyObservers("HaiFeiZi±»¹Û²ìÕßº«·Ç×ÓÔÚ½øĞĞ»î¶¯1Ê±£¬´«µİ¸ø¸÷Î»¹Û²ìÕßµÄĞÅÏ¢£¡");
-	}
-	
-	public void activeTwo(){
-		System.out.println("HaiFeiZi±»¹Û²ìÕßº«·Ç×ÓÕıÔÚ½øĞĞ»î¶¯2.");
-		
-		//Í¨ÖªËùÓĞµÄ¹Û²ìÕß
-		super.setChanged();
-		super.notifyObservers("HaiFeiZi±»¹Û²ìÕßº«·Ç×ÓÔÚ½øĞĞ»î¶¯2Ê±£¬´«µİ¸ø¸÷Î»¹Û²ìÕßµÄĞÅÏ¢£¡");
-	}
+ * super.notifyObservers("HaiFeiZiè¢«è§‚å¯Ÿè€…éŸ©éå­åœ¨è¿›è¡Œæ´»åŠ¨1æ—¶ï¼Œä¼ é€’ç»™å„ä½è§‚å¯Ÿè€…çš„ä¿¡æ¯ï¼");
+ *
+ * @author mamian
+ * @mail mamianskyma@aliyun.com
+ * @date 2017-02-04 20:50:06
+ * @copyright Â©2017 é©¬é¢ All Rights Reserved
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
+public class HanFeiZi extends Observable {
+
+    public void activeOne() {
+        System.out.println("HaiFeiZiè¢«è§‚å¯Ÿè€…éŸ©éå­æ­£åœ¨è¿›è¡Œæ´»åŠ¨1.");
+
+        //é€šçŸ¥æ‰€æœ‰çš„è§‚å¯Ÿè€…
+        super.setChanged();
+        super.notifyObservers("HaiFeiZiè¢«è§‚å¯Ÿè€…éŸ©éå­åœ¨è¿›è¡Œæ´»åŠ¨1æ—¶ï¼Œä¼ é€’ç»™å„ä½è§‚å¯Ÿè€…çš„ä¿¡æ¯ï¼");
+    }
+
+    public void activeTwo() {
+        System.out.println("HaiFeiZiè¢«è§‚å¯Ÿè€…éŸ©éå­æ­£åœ¨è¿›è¡Œæ´»åŠ¨2.");
+
+        //é€šçŸ¥æ‰€æœ‰çš„è§‚å¯Ÿè€…
+        super.setChanged();
+        super.notifyObservers("HaiFeiZiè¢«è§‚å¯Ÿè€…éŸ©éå­åœ¨è¿›è¡Œæ´»åŠ¨2æ—¶ï¼Œä¼ é€’ç»™å„ä½è§‚å¯Ÿè€…çš„ä¿¡æ¯ï¼");
+    }
 }

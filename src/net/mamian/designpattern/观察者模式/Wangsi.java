@@ -1,15 +1,21 @@
-package net.mamian.designpattern.¹Û²ìÕßÄ£Ê½;
+package net.mamian.designpattern.è§‚å¯Ÿè€…æ¨¡å¼;
 
 import java.util.Observer;
 import java.util.Observable;
 
-/*
- * ¹Û²ìÕß¶ÔÏó£¬ÊµÏÖObserver½Ó¿ÚµÄupdate(Observable observable, Object arg1)·½·¨£¬µÚÒ»¸ö²ÎÊıÎªÆäËù¹Û²ìµÄ¶ÔÏó£¬µÚ¶ş¸ö²ÎÊıÎª±»¹Û²ìÕß¶ÔÏó´«µİ¸ø×Ô¼ºµÄĞÅÏ¢
- * */
-public class Wangsi implements Observer{
-	public void update(Observable observable,Object arg1){
-		System.out.println("Wangsi¹Û²ìÕßÍõË¹¹Û²ìµ½±»¹Û²ìÕßº«·Ç×Ó¿ªÊ¼½øĞĞ»î¶¯ÁË£º"+arg1.toString());
-		System.out.println("Wangsi¹Û²ìÕßÍõË¹¹Û²ìÍê±Ï£¡");
-		System.out.println("Wangsi=====================================================");
-	}
+/**
+ * è§‚å¯Ÿè€…å¯¹è±¡ï¼Œå®ç°Observeræ¥å£çš„update(Observable observable, Object arg1)æ–¹æ³•ï¼Œç¬¬ä¸€ä¸ªå‚æ•°ä¸ºå…¶æ‰€è§‚å¯Ÿçš„å¯¹è±¡ï¼Œç¬¬äºŒä¸ªå‚æ•°ä¸ºè¢«è§‚å¯Ÿè€…å¯¹è±¡ä¼ é€’ç»™è‡ªå·±çš„ä¿¡æ¯
+ *
+ * @author mamian
+ * @mail mamianskyma@aliyun.com
+ * @date 2017-02-04 20:52:29
+ * @copyright Â©2017 é©¬é¢ All Rights Reserved
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
+public class Wangsi implements Observer {
+    public void update(Observable observable, Object arg1) {
+        System.out.println("Wangsiè§‚å¯Ÿè€…ç‹æ–¯è§‚å¯Ÿåˆ°è¢«è§‚å¯Ÿè€…éŸ©éå­å¼€å§‹è¿›è¡Œæ´»åŠ¨äº†ï¼š" + arg1.toString());
+        System.out.println("Wangsiè§‚å¯Ÿè€…ç‹æ–¯è§‚å¯Ÿå®Œæ¯•ï¼");
+        System.out.println("Wangsi=====================================================");
+    }
 }
