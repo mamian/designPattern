@@ -1,43 +1,49 @@
-package net.mamian.designpattern.·ÃÎÊÕßÄ£Ê½;
+package net.mamian.designpattern.è®¿é—®è€…æ¨¡å¼;
 
+/**
+ * è®¿é—®è€…æ¨¡å¼ï¼š
+ *
+ * @author mamian
+ * @mail mamianskyma@aliyun.com
+ * @date 2017-02-06 20:23:16
+ * @copyright Â©2017 é©¬é¢ All Rights Reserved
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
 public abstract class Employee {
-	public final static int MALE = 0; //0´ú±íÊÇÄĞĞÔ
-	public final static int FEMALE = 1; //1´ú±íÊÇÅ®ĞÔ
-	
-	private String name;//±Â¹ÜÊÇË­£¬¶¼ÓĞ¹¤×Ê
-	
-	private int salary;//Ö»ÒªÊÇÔ±¹¤ÄÇ¾ÍÓĞĞ½Ë®
-	
-	private int sex;//ĞÔ±ğºÜÖØÒª
-	
-	public abstract void accept(VisitorInterface visitor);//ÎÒÔÊĞíÒ»¸ö·ÃÎÊÕß¹ıÀ´·ÃÎÊ
+    public final static int MALE = 0; //0ä»£è¡¨æ˜¯ç”·æ€§
+    public final static int FEMALE = 1; //1ä»£è¡¨æ˜¯å¥³æ€§
 
-	
-	
-	
-	
-	public String getName() {
-		return name;
-	}
+    private String name;//ç”­ç®¡æ˜¯è°ï¼Œéƒ½æœ‰å·¥èµ„
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    private int salary;//åªè¦æ˜¯å‘˜å·¥é‚£å°±æœ‰è–ªæ°´
 
-	public int getSalary() {
-		return salary;
-	}
+    private int sex;//æ€§åˆ«å¾ˆé‡è¦
 
-	public void setSalary(int salary) {
-		this.salary = salary;
-	}
+    public abstract void accept(VisitorInterface visitor);//æˆ‘å…è®¸ä¸€ä¸ªè®¿é—®è€…è¿‡æ¥è®¿é—®
 
-	public int getSex() {
-		return sex;
-	}
 
-	public void setSex(int sex) {
-		this.sex = sex;
-	}
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getSalary() {
+        return salary;
+    }
+
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
+
+    public int getSex() {
+        return sex;
+    }
+
+    public void setSex(int sex) {
+        this.sex = sex;
+    }
 
 }

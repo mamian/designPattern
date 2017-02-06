@@ -1,8 +1,18 @@
-package net.mamian.designpattern.·ÃÎÊÕßÄ£Ê½;
+package net.mamian.designpattern.è®¿é—®è€…æ¨¡å¼;
 
+/**
+ * è®¿é—®è€…æ¨¡å¼ï¼š
+ *
+ * @author mamian
+ * @mail mamianskyma@aliyun.com
+ * @date 2017-02-06 20:27:19
+ * @copyright Â©2017 é©¬é¢ All Rights Reserved
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
 public interface VisitorInterface {
-	//Ê×ÏÈ¶¨ÒåÎÒ¿ÉÒÔ·ÃÎÊÆÕÍ¨Ô±¹¤
-	public void visit(CommonEmployee commonEmployee);
-	//Æä´Î¶¨Òå£¬ÎÒ»¹¿ÉÒÔ·ÃÎÊ²¿ÃÅ¾­Àí
-	public void visit(Manager manager);
+    //é¦–å…ˆå®šä¹‰æˆ‘å¯ä»¥è®¿é—®æ™®é€šå‘˜å·¥
+    public void visit(CommonEmployee commonEmployee);
+
+    //å…¶æ¬¡å®šä¹‰ï¼Œæˆ‘è¿˜å¯ä»¥è®¿é—®éƒ¨é—¨ç»ç†
+    public void visit(Manager manager);
 }

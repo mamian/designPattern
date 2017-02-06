@@ -1,44 +1,49 @@
-package net.mamian.designpattern.·ÃÎÊÕßÄ£Ê½;
+package net.mamian.designpattern.è®¿é—®è€…æ¨¡å¼;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/*
- * ·ÃÎÊÕßÄ£Ê½£º
- * */
+/**
+ * è®¿é—®è€…æ¨¡å¼ï¼š
+ *
+ * @author mamian
+ * @mail mamianskyma@aliyun.com
+ * @date 2017-02-06 20:31:13
+ * @copyright Â©2017 é©¬é¢ All Rights Reserved
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
 public class Client {
-	public static void main(String[] args){
-		for(Employee emp:mockEmployee()){
-			emp.accept(new Visitor());
-		}
-	}
-	
-	
-	
-	//Ä£Äâ³ö¹«Ë¾µÄÈËÔ±Çé¿ö£¬ÎÒÃÇ¿ÉÒÔÏëÏóÕâ¸öÊı¾İÊÒÍ¨¹ı³Ö¾Ã²ã´«µİ¹ıÀ´µÄ
-	public static List<Employee> mockEmployee(){
-		List<Employee> empList = new ArrayList<Employee>();
-		//²úÉúÕÅÈıÕâ¸öÔ±¹¤
-		CommonEmployee zhangSan = new CommonEmployee();
-		zhangSan.setJob("±àĞ´Java³ÌĞò£¬¾ø¶ÔµÄÀ¶Áì¡¢¿à¹¤¼Ó°áÔË¹¤");
-		zhangSan.setName("ÕÅÈı");
-		zhangSan.setSalary(1800);
-		zhangSan.setSex(Employee.MALE);
-		empList.add(zhangSan);
-		//²úÉúÀîËÄÕâ¸öÔ±¹¤
-		CommonEmployee liSi = new CommonEmployee();
-		liSi.setJob("Ò³ÃæÃÀ¹¤£¬ÉóÃÀËØÖÊÌ«²»Á÷ĞĞÁË£¡");
-		liSi.setName("ÀîËÄ");
-		liSi.setSalary(1900);
-		liSi.setSex(Employee.FEMALE);
-		empList.add(liSi);
-		//ÔÙ²úÉúÒ»¸ö¾­Àí
-		Manager wangWu = new Manager();
-		wangWu.setName("ÍõÎå");
-		wangWu.setPerformance("»ù±¾ÉÏÊÇ¸ºÖµ£¬µ«ÊÇÎÒ»áÅÄÂíÆ¨Ñ½");
-		wangWu.setSalary(18750);
-		wangWu.setSex(Employee.MALE);
-		empList.add(wangWu);
-		return empList;
-	}
+    public static void main(String[] args) {
+        for (Employee emp : mockEmployee()) {
+            emp.accept(new Visitor());
+        }
+    }
+
+
+    //æ¨¡æ‹Ÿå‡ºå…¬å¸çš„äººå‘˜æƒ…å†µï¼Œæˆ‘ä»¬å¯ä»¥æƒ³è±¡è¿™ä¸ªæ•°æ®å®¤é€šè¿‡æŒä¹…å±‚ä¼ é€’è¿‡æ¥çš„
+    public static List<Employee> mockEmployee() {
+        List<Employee> empList = new ArrayList<Employee>();
+        //äº§ç”Ÿå¼ ä¸‰è¿™ä¸ªå‘˜å·¥
+        CommonEmployee zhangSan = new CommonEmployee();
+        zhangSan.setJob("ç¼–å†™Javaç¨‹åºï¼Œç»å¯¹çš„è“é¢†ã€è‹¦å·¥åŠ æ¬è¿å·¥");
+        zhangSan.setName("å¼ ä¸‰");
+        zhangSan.setSalary(1800);
+        zhangSan.setSex(Employee.MALE);
+        empList.add(zhangSan);
+        //äº§ç”Ÿæå››è¿™ä¸ªå‘˜å·¥
+        CommonEmployee liSi = new CommonEmployee();
+        liSi.setJob("é¡µé¢ç¾å·¥ï¼Œå®¡ç¾ç´ è´¨å¤ªä¸æµè¡Œäº†ï¼");
+        liSi.setName("æå››");
+        liSi.setSalary(1900);
+        liSi.setSex(Employee.FEMALE);
+        empList.add(liSi);
+        //å†äº§ç”Ÿä¸€ä¸ªç»ç†
+        Manager wangWu = new Manager();
+        wangWu.setName("ç‹äº”");
+        wangWu.setPerformance("åŸºæœ¬ä¸Šæ˜¯è´Ÿå€¼ï¼Œä½†æ˜¯æˆ‘ä¼šæ‹é©¬å±å‘€");
+        wangWu.setSalary(18750);
+        wangWu.setSex(Employee.MALE);
+        empList.add(wangWu);
+        return empList;
+    }
 }

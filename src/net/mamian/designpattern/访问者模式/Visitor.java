@@ -1,44 +1,50 @@
-package net.mamian.designpattern.·ÃÎÊÕßÄ£Ê½;
+package net.mamian.designpattern.è®¿é—®è€…æ¨¡å¼;
 
-/*
- * ·ÃÎÊÕß£¬
- * */
-public class Visitor implements VisitorInterface{
+/**
+ * è®¿é—®è€…
+ *
+ * @author mamian
+ * @mail mamianskyma@aliyun.com
+ * @date 2017-02-06 20:29:04
+ * @copyright Â©2017 é©¬é¢ All Rights Reserved
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
+public class Visitor implements VisitorInterface {
 
-	public Visitor() {
-		
-	}
+    public Visitor() {
 
-	@Override
-	public void visit(CommonEmployee commonEmployee) {
-		String commonEmployeeInfo = getCommonEmployee(commonEmployee);
-		System.out.println(commonEmployeeInfo);
-	}
+    }
 
-	@Override
-	public void visit(Manager manager) {
-		String managerInfo = getManagerInfo(manager);
-		System.out.println(managerInfo);
-	}
-	
-	
-	
-	//×é×°³ö»ù±¾ĞÅÏ¢
-	private String getBasicInfo(Employee employee){
-		String info = "ĞÕÃû£º" + employee.getName() + "\t";
-		info = info + "ĞÔ±ğ£º" + (employee.getSex() == Employee.FEMALE?"Å®":"ÄĞ") + "\t";
-		info = info + "Ğ½Ë®£º" + employee.getSalary() + "\t";
-		return info;
-	}
-	private String getCommonEmployee(CommonEmployee commonEmployee){
-		String basicInfo = this.getBasicInfo(commonEmployee);
-		String otherInfo = "¹¤×÷£º"+commonEmployee.getJob()+"\t";
-		return basicInfo + otherInfo;
-	}
-	
-	private String getManagerInfo(Manager manager){
-		String basicInfo = this.getBasicInfo(manager);
-		String otherInfo = "Òµ¼¨£º"+manager.getPerformance() + "\t";
-		return basicInfo + otherInfo;
-	}
+    @Override
+    public void visit(CommonEmployee commonEmployee) {
+        String commonEmployeeInfo = getCommonEmployee(commonEmployee);
+        System.out.println(commonEmployeeInfo);
+    }
+
+    @Override
+    public void visit(Manager manager) {
+        String managerInfo = getManagerInfo(manager);
+        System.out.println(managerInfo);
+    }
+
+
+    //ç»„è£…å‡ºåŸºæœ¬ä¿¡æ¯
+    private String getBasicInfo(Employee employee) {
+        String info = "å§“åï¼š" + employee.getName() + "\t";
+        info = info + "æ€§åˆ«ï¼š" + (employee.getSex() == Employee.FEMALE ? "å¥³" : "ç”·") + "\t";
+        info = info + "è–ªæ°´ï¼š" + employee.getSalary() + "\t";
+        return info;
+    }
+
+    private String getCommonEmployee(CommonEmployee commonEmployee) {
+        String basicInfo = this.getBasicInfo(commonEmployee);
+        String otherInfo = "å·¥ä½œï¼š" + commonEmployee.getJob() + "\t";
+        return basicInfo + otherInfo;
+    }
+
+    private String getManagerInfo(Manager manager) {
+        String basicInfo = this.getBasicInfo(manager);
+        String otherInfo = "ä¸šç»©ï¼š" + manager.getPerformance() + "\t";
+        return basicInfo + otherInfo;
+    }
 }
