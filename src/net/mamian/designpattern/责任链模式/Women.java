@@ -1,31 +1,38 @@
-package net.mamian.designpattern.ÔğÈÎÁ´Ä£Ê½;
+package net.mamian.designpattern.è´£ä»»é“¾æ¨¡å¼;
 
-public class Women implements WomenInterface{
-	private int type=0;//1Î´³ö¼Ş        2³ö¼Ş        3·òËÀ
-	private String request = "";
-	
-	public Women(int type,String request){
-		this.type = type;
-		//ÎªÁËÏÔÊ¾ºÃ¿´µã£¬ÎÒÔÚÕâÀï×öÁËµã´¦Àí
-		switch(type){
-			case 1:
-				this.request = "Å®¶ùµÄÇëÇóÊÇ£º" + request;
-				break;
-			case 2:
-				this.request = "ÆŞ×ÓµÄÇëÇóÊÇ£º" + request;
-				break;
-			case 3:
-				this.request = "Ä¸Ç×µÄÇëÇóÊÇ£º" + request;
-		}
-	}
-	
-	@Override
-	public int getType() {
-		return type;
-	}
+/**
+ * @author mamian
+ * @mail mamianskyma@aliyun.com
+ * @date 2017-02-07 20:46:47
+ * @copyright Â©2017 é©¬é¢ All Rights Reserved
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
+public class Women implements WomenInterface {
+    private int type = 0;//1æœªå‡ºå«        2å‡ºå«        3å¤«æ­»
+    private String request = "";
 
-	@Override
-	public String getRequest() {
-		return request;
-	}
+    public Women(int type, String request) {
+        this.type = type;
+        //ä¸ºäº†æ˜¾ç¤ºå¥½çœ‹ç‚¹ï¼Œæˆ‘åœ¨è¿™é‡Œåšäº†ç‚¹å¤„ç†
+        switch (type) {
+            case 1:
+                this.request = "å¥³å„¿çš„è¯·æ±‚æ˜¯ï¼š" + request;
+                break;
+            case 2:
+                this.request = "å¦»å­çš„è¯·æ±‚æ˜¯ï¼š" + request;
+                break;
+            case 3:
+                this.request = "æ¯äº²çš„è¯·æ±‚æ˜¯ï¼š" + request;
+        }
+    }
+
+    @Override
+    public int getType() {
+        return type;
+    }
+
+    @Override
+    public String getRequest() {
+        return request;
+    }
 }

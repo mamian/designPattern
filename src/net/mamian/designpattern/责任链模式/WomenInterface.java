@@ -1,9 +1,16 @@
-package net.mamian.designpattern.ÔğÈÎÁ´Ä£Ê½;
+package net.mamian.designpattern.è´£ä»»é“¾æ¨¡å¼;
 
+/**
+ * @author mamian
+ * @mail mamianskyma@aliyun.com
+ * @date 2017-02-07 20:45:15
+ * @copyright Â©2017 é©¬é¢ All Rights Reserved
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
 public interface WomenInterface {
-	//»ñµÃ¸öÈË×´¿ö
-	public int getType();
-	
-	//»ñµÃ¸öÈËÇëÊ¾£¬ÄãÒª¸ÉÊ²Ã´£¿³öÈ¥¹ä½Ö£¿Ô¼»á?»¹ÊÇ¿´µçÓ°
-	public String getRequest();
+    //è·å¾—ä¸ªäººçŠ¶å†µ
+    public int getType();
+
+    //è·å¾—ä¸ªäººè¯·ç¤ºï¼Œä½ è¦å¹²ä»€ä¹ˆï¼Ÿå‡ºå»é€›è¡—ï¼Ÿçº¦ä¼š?è¿˜æ˜¯çœ‹ç”µå½±
+    public String getRequest();
 }

@@ -1,16 +1,23 @@
-package net.mamian.designpattern.ÔğÈÎÁ´Ä£Ê½;
+package net.mamian.designpattern.è´£ä»»é“¾æ¨¡å¼;
 
-public class Father extends Handler{
-	
-	public Father(){//¸¸Ç×Ö»´¦ÀíÅ®¶ùµÄÇëÇó
-		super(1);
-	}
-	
-	//¸¸Ç×µÄ´ğ¸´
-	@Override
-	public void response(WomenInterface women) {
-		System.out.println("--------Å®¶ùÏò¸¸Ç×ÇëÊ¾-------");
-		System.out.println(women.getRequest());
-		System.out.println("¸¸Ç×µÄ´ğ¸´ÊÇ:Í¬Òâ\n");
-	}
+/**
+ * @author mamian
+ * @mail mamianskyma@aliyun.com
+ * @date 2017-02-07 20:48:43
+ * @copyright Â©2017 é©¬é¢ All Rights Reserved
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
+public class Father extends Handler {
+
+    public Father() {//çˆ¶äº²åªå¤„ç†å¥³å„¿çš„è¯·æ±‚
+        super(1);
+    }
+
+    //çˆ¶äº²çš„ç­”å¤
+    @Override
+    public void response(WomenInterface women) {
+        System.out.println("--------å¥³å„¿å‘çˆ¶äº²è¯·ç¤º-------");
+        System.out.println(women.getRequest());
+        System.out.println("çˆ¶äº²çš„ç­”å¤æ˜¯:åŒæ„\n");
+    }
 }

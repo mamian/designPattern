@@ -1,33 +1,38 @@
-package net.mamian.designpattern.ÔğÈÎÁ´Ä£Ê½;
+package net.mamian.designpattern.è´£ä»»é“¾æ¨¡å¼;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-
-/*
- * ÔğÈÎÁ´Ä£Ê½£ºÒ»¸öÇëÇó£¬ÒÀ´Î½»¸ø¶à¸ö¶ÔÏóÈ¥´¦Àí£¬Èô¶ÔÏóAÎŞ·¨´¦Àí£¬Ôò½»¸øÏÂÒ»ÏÂ¶ÔÏóB´¦Àí£¬ÈôBÎŞ·¨´¦Àí£¬Ôò½»¸øÏÂÒ»¸ö¶ÔÏóC´¦Àí
- * ÔÚ¸¸·ò×ÓµÄ¸¸ÀàÖĞ¶¨Òå£ºÈç¹û±¾¶ÔÏóÎŞ·¨´¦ÀíÄ³ÏîÇëÇó£¬Ôò½»¸øÏÂÒ»¸ö¶ÔÏó´¦Àí
- * ¶ø´¦ÀíÇëÇóµÄ¶ÔÏóµÄË³ĞòÔÚclientÖĞÊµÊ±¶¨Òå
- * */
+/**
+ * è´£ä»»é“¾æ¨¡å¼ï¼šä¸€ä¸ªè¯·æ±‚ï¼Œä¾æ¬¡äº¤ç»™å¤šä¸ªå¯¹è±¡å»å¤„ç†ï¼Œè‹¥å¯¹è±¡Aæ— æ³•å¤„ç†ï¼Œåˆ™äº¤ç»™ä¸‹ä¸€ä¸‹å¯¹è±¡Bå¤„ç†ï¼Œè‹¥Bæ— æ³•å¤„ç†ï¼Œåˆ™äº¤ç»™ä¸‹ä¸€ä¸ªå¯¹è±¡Cå¤„ç†
+ * åœ¨çˆ¶å¤«å­çš„çˆ¶ç±»ä¸­å®šä¹‰ï¼šå¦‚æœæœ¬å¯¹è±¡æ— æ³•å¤„ç†æŸé¡¹è¯·æ±‚ï¼Œåˆ™äº¤ç»™ä¸‹ä¸€ä¸ªå¯¹è±¡å¤„ç†
+ * è€Œå¤„ç†è¯·æ±‚çš„å¯¹è±¡çš„é¡ºåºåœ¨clientä¸­å®æ—¶å®šä¹‰
+ *
+ * @author mamian
+ * @mail mamianskyma@aliyun.com
+ * @date 2017-02-07 20:54:14
+ * @copyright Â©2017 é©¬é¢ All Rights Reserved
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
 public class Client {
-	public static void main(String[] args) {
-		//Ëæ»úÌôÑ¡¼¸¸öÅ®ĞÔ
-		Random rand = new Random();
-		List<WomenInterface> arrayList = new ArrayList<WomenInterface>();
-		for(int i=0;i<5;i++){
-			arrayList.add(new Women(rand.nextInt(4),"ÎÒÒª³öÈ¥¹ä½Ö"));
-		}
-		//¶¨ÒåÈı¸öÇëÊ¾¶ÔÏó
-		Handler father = new Father();
-		Handler husband = new Husband();
-		Handler son = new Son();
-		
-		//ÉèÖÃÇëÊ¾Ë³Ğò
-		father.setNext(husband);
-		husband.setNext(son);
-		for(WomenInterface women:arrayList){
-			father.HandleMessage(women);
-		}
-	}
+    public static void main(String[] args) {
+        //éšæœºæŒ‘é€‰å‡ ä¸ªå¥³æ€§
+        Random rand = new Random();
+        List<WomenInterface> arrayList = new ArrayList<>();
+        for (int i = 0; i < 5; i++) {
+            arrayList.add(new Women(rand.nextInt(4), "æˆ‘è¦å‡ºå»é€›è¡—"));
+        }
+        //å®šä¹‰ä¸‰ä¸ªè¯·ç¤ºå¯¹è±¡
+        Handler father = new Father();
+        Handler husband = new Husband();
+        Handler son = new Son();
+
+        //è®¾ç½®è¯·ç¤ºé¡ºåº
+        father.setNext(husband);
+        husband.setNext(son);
+        for (WomenInterface women : arrayList) {
+            father.HandleMessage(women);
+        }
+    }
 }

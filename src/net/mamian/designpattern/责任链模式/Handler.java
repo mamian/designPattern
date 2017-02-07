@@ -1,31 +1,39 @@
-package net.mamian.designpattern.ÔğÈÎÁ´Ä£Ê½;
+package net.mamian.designpattern.è´£ä»»é“¾æ¨¡å¼;
 
+/**
+ * @author mamian
+ * @mail mamianskyma@aliyun.com
+ * @date 2017-02-07 20:52:57
+ * @copyright Â©2017 é©¬é¢ All Rights Reserved
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
 public abstract class Handler {
-	//ÄÜ´¦ÀíµÄ¼¶±ğ
-	private int level =0;
-	//ÔğÈÎ´«µİ£¬ÏÂÒ»¸öÈËÔğÈÎÈËÊÇË­
-	private Handler nextHanlder;
-	
-	//Ã¿¸öÀà¶¼ÒªËµÃ÷Ò»ÏÂ×Ô¼ºÄÜ´¦ÀíÄÄĞ©ÇëÇó
-	public Handler(int level){
-		this.level = level;
-	}
-	public final void HandleMessage(WomenInterface women){
-		if(women.getType() == this.level){
-			this.response(women);
-		}else{
-			if(this.nextHanlder != null){ //ÓĞºóĞø»·½Ú£¬²Å°ÑÇëÇóÍùºóµİËÍ
-				this.nextHanlder.HandleMessage(women);
-			}else{ //ÒÑ¾­Ã»ÓĞºóĞø´¦ÀíÈËÁË£¬²»ÓÃ´¦ÀíÁË
-				System.out.println("-----------Ã»µØ·½ÇëÊ¾ÁË£¬²»×ö´¦Àí£¡---------\n");
-			}
-		}
-	}
-	
-	public void setNext(Handler _handler){
-		this.nextHanlder = _handler;
-	}
-	
-	//ÓĞÇëÊ¾ÄÇµ±È»Òª»ØÓ¦
-	public abstract void response(WomenInterface women);
+    //èƒ½å¤„ç†çš„çº§åˆ«
+    private int level = 0;
+    //è´£ä»»ä¼ é€’ï¼Œä¸‹ä¸€ä¸ªäººè´£ä»»äººæ˜¯è°
+    private Handler nextHanlder;
+
+    //æ¯ä¸ªç±»éƒ½è¦è¯´æ˜ä¸€ä¸‹è‡ªå·±èƒ½å¤„ç†å“ªäº›è¯·æ±‚
+    public Handler(int level) {
+        this.level = level;
+    }
+
+    public final void HandleMessage(WomenInterface women) {
+        if (women.getType() == this.level) {
+            this.response(women);
+        } else {
+            if (this.nextHanlder != null) { //æœ‰åç»­ç¯èŠ‚ï¼Œæ‰æŠŠè¯·æ±‚å¾€åé€’é€
+                this.nextHanlder.HandleMessage(women);
+            } else { //å·²ç»æ²¡æœ‰åç»­å¤„ç†äººäº†ï¼Œä¸ç”¨å¤„ç†äº†
+                System.out.println("-----------æ²¡åœ°æ–¹è¯·ç¤ºäº†ï¼Œä¸åšå¤„ç†ï¼---------\n");
+            }
+        }
+    }
+
+    public void setNext(Handler _handler) {
+        this.nextHanlder = _handler;
+    }
+
+    //æœ‰è¯·ç¤ºé‚£å½“ç„¶è¦å›åº”
+    public abstract void response(WomenInterface women);
 }
