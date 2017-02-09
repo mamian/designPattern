@@ -1,24 +1,31 @@
-package net.mamian.designpattern.ÃÅÃæÄ£Ê½;
+package net.mamian.designpattern.é—¨é¢æ¨¡å¼;
 
-public class WriteLetterImpl implements WriteLetterInterface{
-	@Override
-	public void setTitle(String title) {
-		System.out.println("Ğ´ĞÅµÄ±êÌâ:"+title);
-	}
+/**
+ * @author mamian
+ * @mail mamianskyma@aliyun.com
+ * @date 2017-02-09 20:39:17
+ * @copyright Â©2017 é©¬é¢ All Rights Reserved
+ * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+ */
+public class WriteLetterImpl implements WriteLetterInterface {
+    @Override
+    public void setTitle(String title) {
+        System.out.println("å†™ä¿¡çš„æ ‡é¢˜:" + title);
+    }
 
-	@Override
-	public void setContent(String content) {
-		System.out.println("Ğ´ĞÅµÄÄÚÈİ:"+content);
-	}
+    @Override
+    public void setContent(String content) {
+        System.out.println("å†™ä¿¡çš„å†…å®¹:" + content);
+    }
 
-	@Override
-	public void setAddress(String address) {
-		System.out.println("Ğ´ÊÕĞÅÈËµØÖ·:"+address);
-	}
+    @Override
+    public void setAddress(String address) {
+        System.out.println("å†™æ”¶ä¿¡äººåœ°å€:" + address);
+    }
 
-	@Override
-	public void sendLetter() {
-		System.out.println("¿ªÊ¼·¢ËÍĞÅ¼ş");
-	}
+    @Override
+    public void sendLetter() {
+        System.out.println("å¼€å§‹å‘é€ä¿¡ä»¶");
+    }
 
 }
